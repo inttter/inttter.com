@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    max-width: 600px;
+    width: 90%;
+    padding: 20px;
+  }
+  
+  .glassmorphic {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .glassmorphic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .glassmorphic h1 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .glassmorphic p {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .social-links img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+
+.kofi {
+    width: 300px;
+    height: auto;
+}
