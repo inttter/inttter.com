@@ -12,6 +12,7 @@ body {
     max-width: 600px;
     width: 90%;
     padding: 20px;
+    font-family: 'Poppins', sans-serif;
   }
   
   .glassmorphic {
@@ -27,7 +28,6 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
   }
   
   .glassmorphic h1 {
@@ -56,9 +56,3 @@ body {
     height: 40px;
     border-radius: 50%;
   }
-
-
-.kofi {
-    width: 300px;
-    height: auto;
-}
