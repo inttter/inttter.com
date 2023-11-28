@@ -9,12 +9,39 @@ body {
   }
   
   .container {
-    max-width: 600px;
+    max-width: 800px;
     width: 90%;
     padding: 20px;
     font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.5s ease-in-out;
+    z-index: 0;
+  }
+
+/* Shine effect */  
+.container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(19, 93, 149, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    transform: rotate(45deg);
+    transition: transform 0.5s ease-in-out;
+    pointer-events: none; /* Allow pointer events to go through the shine effect */
   }
   
+  .container:hover::before {
+    transform: rotate(135deg);
+  }
+  
+  .container:hover {
+    box-shadow: 0 0 50px rgba(75, 114, 255, 0.5)/* Adding a shadow on hover */
+  }
+
+
   .glassmorphic {
     background: rgba(255, 255, 255, 0.15);
     border-radius: 20px;
@@ -45,7 +72,7 @@ body {
     display: flex;
     justify-content: center;
   }
-  
+
   .social-links a {
     display: inline-block;
     margin: 0 10px;
@@ -55,4 +82,11 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    transform: scale(1)
+  }
+
+  .social-links img:hover {
+    transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    transform: scale(0.8)
   }
