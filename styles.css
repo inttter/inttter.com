@@ -12,6 +12,7 @@ body {
     max-width: 800px;
     width: 90%;
     padding: 20px;
+    border-radius: 20px;
     font-family: 'Poppins', sans-serif;
     position: relative;
     overflow: hidden;
