@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="projects-page/projectpage-scrollbar.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: rgb(11,32,39);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+      box-sizing: border-box;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+      color: white;
+    }
+
+    #projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      justify-items: center;
+      width: 60%; /* Ensure projects fill the available width */
+    }
+
+    .project {
+      width: 100%;
+      background-color: gold;
+      padding: 30px;
+      border-radius: 20px;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .project:hover {
+      background-color: #c8d7e3; /* Change background color on hover */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>my projects:</h1>
+  </header>
+
+  <div id="projects-container">
+    <!-- projects will load here -->
+  </div>
+
+  <script>
+    // Fetching GitHub repositories using GitHub API
+    fetch('https://api.github.com/users/inttter/repos') // Replace 'yourusername' with your actual GitHub username
+      .then(response => response.json())
+      .then(repos => {
+        const projectsContainer = document.getElementById('projects-container');
+        repos.forEach(repo => {
+          const projectDiv = document.createElement('div');
+          projectDiv.classList.add('project');
+          projectDiv.innerHTML = `
+            <h2>${repo.name}</h2>
+            <p>${repo.description || 'No description available'}</p>
+          `;
+          projectDiv.addEventListener('click', () => {
+            window.open(repo.html_url, '_blank');
+          });
+          projectsContainer.appendChild(projectDiv);
+        });
+      })
+      .catch(error => console.error('Error fetching GitHub repositories:', error));
+  </script>
+  <br>
+  <br>
+  <br>
+  <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="intter" data-color="#000000" data-emoji=""  data-font="Poppins" data-text="buy me a coffee" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+</body>
+</html>
