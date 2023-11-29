@@ -16,6 +16,14 @@
       align-items: center;
       padding-top: 50px;
       box-sizing: border-box;
+      opacity: 0;
+      animation: fadeInAnimation 0.5s ease-in forwards;
+    }
+
+    @keyframes fadeInAnimation {
+      to {
+        opacity: 1;
+      }
     }
 
     header {
@@ -29,7 +37,7 @@
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 30px;
       justify-items: center;
-      width: 60%; /* Ensure projects fill the available width */
+      width: 60%;
     }
 
     .project {
@@ -43,7 +51,17 @@
     }
 
     .project:hover {
-      background-color: #c8d7e3; /* Change background color on hover */
+      background-color: #c8d7e3;
+    }
+
+    .bmac-button {
+      transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+      transform: scale(0.95);
+    }
+
+    .bmac-button:hover {
+      transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+      transform: scale(0.9)
     }
   </style>
 </head>
@@ -58,7 +76,7 @@
 
   <script>
     // Fetching GitHub repositories using GitHub API
-    fetch('https://api.github.com/users/inttter/repos') // Replace 'yourusername' with your actual GitHub username
+    fetch('https://api.github.com/users/inttter/repos')
       .then(response => response.json())
       .then(repos => {
         const projectsContainer = document.getElementById('projects-container');
@@ -79,7 +97,13 @@
   </script>
   <br>
   <br>
+  
+  <a href="https://inttter.github.io/portfolio">
+  <h1>⬅️ back</h1>
+  </a>
   <br>
+  <div class="bmac-button">
   <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="intter" data-color="#000000" data-emoji=""  data-font="Poppins" data-text="buy me a coffee" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+  </div>
 </body>
 </html>
