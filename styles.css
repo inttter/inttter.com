@@ -24,7 +24,6 @@ body {
     font-family: 'Poppins', sans-serif;
     position: relative;
     overflow: hidden;
-    transition: box-shadow 10s ease-in-out;
     z-index: 0;
   }
 
@@ -44,10 +43,6 @@ body {
   
   .container:hover::before {
     transform: rotate(135deg);
-  }
-  
-  .container:hover {
-    box-shadow: 0 0 20px rgba(75, 114, 255, 0.5)/* Adding a shadow on hover */
   }
 
 
