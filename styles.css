@@ -6,8 +6,16 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    opacity: 0;
+    animation: fadeInAnimation 0.5s ease-in forwards;
   }
-  
+
+  @keyframes fadeInAnimation {
+    to {
+      opacity: 1;
+    }
+  }
+
   .container {
     max-width: 800px;
     width: 90%;
@@ -16,7 +24,7 @@ body {
     font-family: 'Poppins', sans-serif;
     position: relative;
     overflow: hidden;
-    transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow 10s ease-in-out;
     z-index: 0;
   }
 
@@ -28,10 +36,10 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(45deg, rgba(19, 93, 149, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    background: transparent;
     transform: rotate(45deg);
     transition: transform 0.5s ease-in-out;
-    pointer-events: none; /* Allow pointer events to go through the shine effect */
+    pointer-events: none;
   }
   
   .container:hover::before {
@@ -39,12 +47,12 @@ body {
   }
   
   .container:hover {
-    box-shadow: 0 0 50px rgba(75, 114, 255, 0.5)/* Adding a shadow on hover */
+    box-shadow: 0 0 20px rgba(75, 114, 255, 0.5)/* Adding a shadow on hover */
   }
 
 
   .glassmorphic {
-    background: rgba(255, 255, 255, 0.15);
+    background: transparent;
     border-radius: 20px;
     backdrop-filter: blur(20px);
     padding: 40px;
