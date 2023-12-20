@@ -1,53 +1,46 @@
-<div align="center">
+i<div align="center">
 
-# portfolio/social links ☕
-
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/inttter/portfolio/blob/main/LICENSE) 
-[![Last Commit](https://img.shields.io/github/last-commit/inttter/portfolio?style=flat-square)](https://github.com/inttter/portfolio/commits/main)
-[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Finttter.github.io%2Fportfolio%2F)](https://inttter.github.io/portfolio/)
-[![CodeFactor](https://www.codefactor.io/repository/github/inttter/portfolio/badge)](https://www.codefactor.io/repository/github/inttter/portfolio)
-![Open Issues](https://img.shields.io/github/issues/inttter/portfolio?style=flat-square)
-![Watchers](https://img.shields.io/github/watchers/inttter/portfolio?style=flat-square)
-
-<a href="https://www.buymeacoffee.com/intter" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 150px !important;" ></a>
-
-### a simple portfolio website that also serves as the links page for my socials!
-
-# <u>preview</u>
-
-![preview](preview/preview-image.png)
+# Links 🔗
 
 
-# <u>project page preview</u>
-
-![projects page preview](preview/project-page-preview.png)
-
-# want to use this as a template? 📕
-
-clone this repository by using:
-
-┃ https: ┃ 
-
-`git clone https://github.com/inttter/portfolio`
-
-┃ github cli ┃ 
-
-`gh repo clone inttter/portfolio`
-
-# acknowledgements 🏆
-
-[boxicons]([BoxIcons.com) for the various icons
-
-# license ⚖️
-
-my portfolio/website links website is licensed under the MIT License.
-
-see [license](LICENSE) for more information!
-
-# feel free to donate to me 🎧
-
-<a href="https://www.buymeacoffee.com/intter" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 150px !important;" ></a>
+![Preivew](/assets/preview/preview.png)
 
 <br>
 
-###### 🥞 made with HTML, CSS, and JS 🥞
+[![Website](https://img.shields.io/website-up-down-green-red/http/inttter.github.io/links.svg)](https://inttter.github.io/links)
+[![GitHub last commit](https://img.shields.io/github/last-commit/inttter/links.svg)](https://github.com/inttter/links)
+[![CodeFactor](https://www.codefactor.io/repository/github/inttter/portfolio/badge)](https://www.codefactor.io/repository/github/inttter/portfolio)
+
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/intter)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/intter)
+[![Github-Sponsors](https://img.shields.io/badge/Sponsor-30363D?logo=GitHub-Sponsors&logoColor=#EA4AAA)]((https://github.com/sponsors/inttter))
+
+A minimal website to display my links and projects.
+
+# Want to use this for your own? ✏️
+
+Clone the repository and edit anything you wish:
+
+`git clone https://github.com/inttter/links`
+
+<img src="assets/preview/how-to-clone.png" alt="howtoclone" width="350px" height="300px" />
+
+Make sure to replace everything with references to **yourself**.
+
+# Acknowledgements 🏆
+
+Many tools were used to create this: 
+
+[kittinan/spotify-github-profile](https://github.com/kittinan/spotify-github-profile) for the Spotify Now Playing status image.
+
+[tarptaeya/repo-card](https://github.com/tarptaeya/repo-card) for the cards showing my Featured Projects.
+
+#### [inttter/md-badges](https://github.com/inttter/md-badges), **my own project**, for the badge SVG's.
+
+[OneShot](https://store.steampowered.com/app/420530/OneShot/) for "On Little Cat Feet" (made by Nightmargin), featured in the game!
+
+# License ⚖️
+
+©️ MIT License • [View Here](LICENSE)
+
+###### made with 🥞 - get it? probably not.
