@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>inter</title>
+  <title>Inter</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
     .view-projects-btn {
       text-align: center;
@@ -30,20 +32,81 @@
 <body style="background-color: rgb(11, 32, 39);">
   <div class="container">
     <div class="glassmorphic">
-      <img src="social-images/profile-pic.png" alt="Profile Picture">
-      <h1>inter</h1>
-      <p>gaming (and coding sometimes)</p>
+    <div class="about-me-mini">
+      <h2>I <span class="special-text">love</span> cats <span class="special-text">a lot.</span> •<span class="special-text-2"> he/him </span></h2>
+      <h2>I also <span class="special-text">play some games</span> from time to time.</h2>
+      <br>
+    </div>
       <div class="social-links">
-        <a href="https://github.com/inttter" target="_blank" rel="noopener noreferrer"><img src="social-images/github.png" alt="GitHub"></a>
-        <a href="https://steamcommunity.com/id/intermed" target="_blank" rel="noopener noreferrer"><img src="social-images/steam.png" alt="Steam"></a>
-        <a href="https://open.spotify.com/user/xboxtheman86" target="_blank" rel="noopener noreferrer"><img src="social-images/spotify.png" alt="Spotify"></a>
-        <a href="https://www.last.fm/user/intter" target="_blank" rel="noopener noreferrer"><img src="social-images/lastfm.png"alt="LastFM"></a>
+        <a href="https://github.com/inttter" target="_blank" rel="noopener noreferrer"><img src="assets/social-images/github.png" alt="GitHub"></a>
+        <a href="https://steamcommunity.com/id/intermed" target="_blank" rel="noopener noreferrer"><img src="assets/social-images/steam.png" alt="Steam"></a>
+        <a href="https://open.spotify.com/user/xboxtheman86" target="_blank" rel="noopener noreferrer"><img src="assets/social-images/spotify.png" alt="Spotify"></a>
+        <a href="https://www.last.fm/user/intter" target="_blank" rel="noopener noreferrer"><img src="assets/social-images/lastfm.png"alt="LastFM"></a>
       </div>
       <div class="view-projects-btn">
-        <a href="projects.html" id="viewProjectsBtn">view projects</a>
+        <a href="projects.html" target="_blank" rel="noopener noreferrer" class="redirect">
+          View All Projects <i class="fas fa-arrow-circle-up"></i>
       </div>
+      <br>
+      <br>
+      <div class="badges">
+        <a href="https://buymeacoffee.com/intter">
+          <img src="assets/badges/Buy Me A Coffee.svg" alt="Buy Me A Coffee">
+        </a>
+        <a href="https://ko-fi.com/intter">
+          <img src="assets/badges/Ko-Fi.svg" alt="Ko-Fi">
+        </a>
+        <a href="https://github.com/sponsors/inttter">
+          <img src="assets/badges/GitHub Sponsors.svg" alt="GitHub Sponsors">
+        </a>
+      </div>
+            <!-- Spotify profile link -->
+            <div class="spotify-profile">
+              <h3>⤥ Listening on Spotify: ⤦</h3>
+              <a href="https://spotify-github-profile.vercel.app/api/view?uid=xboxtheman86&redirect=true" target="_blank">
+                <img src="https://spotify-github-profile.vercel.app/api/view?uid=xboxtheman86&cover_image=true&theme=novatorem&show_offline=false&background_color=8000ff&interchange=true&bar_color=000000&bar_color_cover=true" alt="Spotify Profile">
+              </a>
+            </div>
+          </div>
+        </div>
     </div>
   </div>
-  <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="intter" data-description="support me!" data-message="" data-color="#6334db" data-position="right" data-x_margin="20" data-y_margin="20"></script>
-</body>
+
+  <!-- Repository cards: https://github.com/tarptaeya/repo-card -->
+
+   <div class="repo-cards-container">
+    <h1>Featured Projects:</h1>
+    <!-- First repo card -->
+    <div class="repo-card" data-repo="inttter/md-badges" data-theme="dark-theme"></div>
+
+    
+    <br>
+    
+    <!-- 2nd one -->
+    <div class="repo-card" data-repo="inttter/colorflow" data-theme="dark-theme"></div>
+
+    <br>
+
+    <!-- 3rd one -->
+    <div class="repo-card" data-repo="inttter/CraftyTunes" data-theme="dark-theme"></div>
+  </div>
+</div>
+  <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
+  <audio id="myAudio">
+    <source src="assets/sound/On Little Cat Feet.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="song-info" onclick="playAudio()">
+    <p><i class="fas fa-compact-disc"></i> On Little Cat Feet - Nightmargin</p>
+    <span class="tooltip">⬇ Click to play. ⬇</span>
+  </div>
+</div>
+  <script>
+    function playAudio() {
+      var audio = document.getElementById('myAudio');
+      audio.volume = 1;
+      audio.play();
+    }
+    </script>
+  </body>
 </html>
