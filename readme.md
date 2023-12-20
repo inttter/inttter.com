@@ -9,7 +9,7 @@
 
 [![Website](https://img.shields.io/website-up-down-green-red/http/inttter.github.io/links.svg)](https://inttter.github.io/links)
 [![GitHub last commit](https://img.shields.io/github/last-commit/inttter/links.svg)](https://github.com/inttter/links)
-[![CodeFactor](https://www.codefactor.io/repository/github/inttter/portfolio/badge)](https://www.codefactor.io/repository/github/inttter/portfolio)
+[![CodeFactor](https://www.codefactor.io/repository/github/inttter/links/badge)](https://www.codefactor.io/repository/github/inttter/links)
 
 [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/intter)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/intter)
