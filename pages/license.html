@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inter</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="preload" href="Mona-Sans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
@@ -12,7 +12,7 @@
 
      @font-face {
      font-family: 'Mona Sans';
-     src: url('font/Mona-Sans.woff2') format('woff2');
+     src: url('/font/Mona-Sans.woff2') format('woff2');
      font-weight: 500;
      font-style: normal;
      font-stretch: 125%;
@@ -30,6 +30,7 @@
       margin-top: 20px;
       line-height: 1.5;
       color: grey;
+      width: 60%;
     }
 
     .song-info {
@@ -82,7 +83,7 @@
         line-height: 1.5;
         color: grey;
         width: 90%;
-        max-width: 600px; /* Adjust maximum width as needed */
+        max-width: 600px;
     }
 
     .return {
@@ -149,7 +150,7 @@
         SOFTWARE.</p>
     </div>
     <div class="return">
-        <a href="/pages/home.html">Home</a>
+        <a href="/index.html">Home</a>
         </div>
     <audio id="myAudio">
       <source src="assets/sound/On Little Cat Feet.mp3" type="audio/mpeg">
@@ -169,6 +170,3 @@
     </script>
   </body>
 </html>
-
-<!-- TODO - Add some more tabs at the bottom (aka Projects -> + some more) !-->
-<!-- TODO - Redo the README with everything updated and some new, more comprehensive information !-->

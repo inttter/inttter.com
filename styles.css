@@ -151,7 +151,7 @@ body::before {
     .projects-link {
       position: absolute;
       display: flex;
-      bottom: 180px;
+      bottom: 140px;
       left: 50%;
       transform: translateX(-50%);
     }
