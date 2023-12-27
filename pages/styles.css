@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('font/Mona-Sans.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: 125%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  opacity: 0;
+  animation: fadeInAnimation 0.5s ease-in forwards;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #18181B;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1; 
+}
+
+  @keyframes fadeInAnimation {
+    to {
+      opacity: 1;
+      color: #18181B;
+    }
+  }
+
+  .container {
+    max-width: 800px;
+    width: 90%;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-links a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .social-links img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    transform: scale(1)
+  }
+
+  .social-links img:hover {
+    transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    transform: scale(0.8)
+  }
+
+  .song-info {
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    bottom: 2px;
+    right: 10px;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .song-info a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .song-info:hover {
+    color: rgb(136, 194, 238);
+    transition: color 0.3s ease;
+  }
+
+  
+  .fa-compact-disc {
+    padding: 5px;
+  }
+
+      /* Tooltip */
+      .tooltip {
+        position: absolute;
+        background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        padding: 5px;
+        border-radius: 4px;
+        bottom: calc(100% + 5px);
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 999;
+      }
+  
+      .song-info:hover .tooltip {
+        opacity: 1;
+      }
+      
+      .pfp {
+      position: absolute;
+      margin-bottom: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 200px;
+    }
+
+    .description {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      max-width: 450px;
+      color: white;
+      font-family: 'Mona Sans', sans-serif;
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+    
+    .projects-link {
+      position: absolute;
+      display: flex;
+      bottom: 180px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .projects-link .project-btn {
+      font-family: 'Mona Sans', sans-serif;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 4px;
+      border: 2px solid transparent;
+      border-color: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+      transition: all 0.6s ease;
+      white-space: nowrap;
+    }
+    
+    .projects-link .project-btn:hover {
+      border-color: green;
+      background-color: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    }
+
+    .special-text {
+      background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    @media screen and (max-width: 568px) {
+      .pfp img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .description {
+        width: 80%;
+      }
+    
+      .social-links img {
+        width: 30px;
+        height: 30px;
+        margin-top: 30px;
+      }
+    
+      .projects-link {
+        display: flex;
+        justify-content: space-around;
+        overflow-x: auto;
+        padding: 10px;
+      }
+    
+      .project-btn {
+        white-space: nowrap;
+        margin: 5px;
+        position: static; 
+      }
+    }

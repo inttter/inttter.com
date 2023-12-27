@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/pages/styles.css">
+    <link rel="preload" href="Mona-Sans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <title>Project Showcase</title>
+</head>
+<style>
+        .projects {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+       }
+
+       .project {
+        width: calc(33.33% - 20px);
+        padding: 20px;
+        background-color: transparent;
+        border-radius: 20px;
+        text-align: center;
+        color: #fff;
+        font-family: 'Mona Sans', sans-serif;
+        transition: transform 0.3s ease;
+      }
+
+        .project:hover {
+        transform: scale(1.05);
+      }
+
+       .project h3 {
+       font-size: 1.2rem;
+       margin-bottom: 8px;
+      }
+
+       .project p {
+       font-size: 1rem;
+       margin-bottom: 10px;
+      }
+
+       .project a {
+       display: inline-block;
+       text-decoration: none;
+       background-color: #333;
+       color: #fff;
+       padding: 6px 12px;
+       border-radius: 4px;
+       transition: background-color 0.5s ease;
+      }
+
+       .project a:hover {
+       background-color: #446748;;
+      }
+
+        .return {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        background-color: transparent;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      .return a {
+       margin: 0 10px;
+       font-family: 'Mona Sans', sans-serif;
+       color: grey;
+       font-size: 1.2rem;
+       text-decoration: overline;
+       border-radius: 4px;
+       padding: 6px 12px;
+       transition: background-color 0.5s ease;
+      }
+
+      .return a:hover {
+        background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      @media screen and (max-width: 568px) {
+  
+    .projects {
+    max-width: 100%;
+    max-height: 90%;
+    margin: 0 auto;
+    display: block;
+    gap: 10px;
+    padding: 10px;
+  }
+ 
+  .project {
+    width: 70%;
+    padding: 15px;
+    text-align: left;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+    
+  .return {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Align items to the right */
+        justify-content: flex-end; /* Align content to the bottom */
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 20px;
+        background-color: transparent;
+        text-align: center;
+    }
+
+    .return a {
+        margin: 5px;
+    }
+
+    html, body {
+       margin: 0;
+       padding: 0;
+       width: 100%;
+       height: 100%;
+       overflow-x: hidden;
+       background-color: #181818;
+     }
+
+     .project:nth-child(4) {
+        visibility: hidden;
+    }
+  }
+
+    @media (orientation: landscape) {
+    body {
+        background-color: #181818;
+    }
+}
+</style>
+<body>
+    <div class="projects">
+        <div class="project">
+            <h1>md-badges</h1>
+            <h3>The definitive badge list for your projects.</h3>
+            <br>
+            <a href="projects-about/md-badges.html" target="_blank" rel="noopener noreferrer">Info</a>
+        </div>
+        <div class="project">
+            <h1>Colorflow</h1>
+            <h3>A simple-to-understand and useful gradient, or color previewer and generator.</h3>
+            <br>
+            <a href="projects-about/colorflow.html" target="_blank" rel="noopener noreferrer">Info</a>
+        </div>
+        <div class="project">
+            <h1>CraftyTunes</h1>
+            <h3>Feel the nostalgia of Minecraft's original soundtrack with CraftyTunes!</h3>
+            <br>
+            <a href="projects-about/craftytunes.html" target="_blank" rel="noopener noreferrer">Info</a>
+        </div>
+        <div class="project">
+            <h1>PetTheCat</h1>
+            <h3>Pet all the cats you see!</h3>
+            <br>
+            <a href="projects-about/petthecat.html" target="_blank" rel="noopener noreferrer">Info</a>
+        </div>
+    </div>
+    <div class="return">
+        <a href="/pages/home.html">Home</a>
+        <a href="https://github.com/inttter?tab=repositories&q=&type=source&language=&sort=">Rest Of My Projects</a>
+      </div>
+</body>
+</html>

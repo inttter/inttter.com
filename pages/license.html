@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inter</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preload" href="Mona-Sans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+<style>
+
+     @font-face {
+     font-family: 'Mona Sans';
+     src: url('font/Mona-Sans.woff2') format('woff2');
+     font-weight: 500;
+     font-style: normal;
+     font-stretch: 125%;
+    }
+
+    .license {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      font-family: 'Mona Sans', sans-serif;
+      font-weight: 100;
+      margin-top: 20px;
+      line-height: 1.5;
+      color: grey;
+    }
+
+    .song-info {
+        font-size: 14px !important;
+    }
+
+    .return {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        background-color: transparent;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      .return a {
+       margin: 0 10px;
+       font-family: 'Mona Sans', sans-serif;
+       font-size: 20px !important;
+       color: grey;
+       font-size: 1.2rem;
+       text-decoration: overline;
+       border-radius: 4px;
+       padding: 6px 12px;
+       transition: background-color 0.5s ease;
+      }
+
+      .return a:hover {
+        background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      @media screen and (max-width: 768px) {
+    .license {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        font-family: 'Mona Sans', sans-serif;
+        font-weight: 100;
+        margin-top: 20px;
+        line-height: 1.5;
+        color: grey;
+        width: 90%;
+        max-width: 600px; /* Adjust maximum width as needed */
+    }
+
+    .return {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        background-color: transparent;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .return a {
+        margin: 0 10px;
+        font-family: 'Mona Sans', sans-serif;
+        font-size: 20px !important;
+        color: grey;
+        font-size: 1.2rem;
+        text-decoration: overline;
+        border-radius: 4px;
+        padding: 6px 12px;
+        transition: background-color 0.5s ease;
+    }
+
+    .return a:hover {
+        background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+    .song-info {
+      display: none; /* I'm hiding the song info on this page on mobile because it overlaps the Home button */
+    } 
+</style>
+<body style="background-color: rgb(11, 32, 39);">
+    <div class="license">
+      <h1><u>MIT License</u></h1>  
+        <p>Copyright ©️ 2023 • Inter
+        <br>
+        <br>
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        <br>
+        <br>
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        <br>
+        <br>
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.</p>
+    </div>
+    <div class="return">
+        <a href="/pages/home.html">Home</a>
+        </div>
+    <audio id="myAudio">
+      <source src="assets/sound/On Little Cat Feet.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div class="song-info" onclick="playAudio()">
+      <p><i class="fas fa-compact-disc"></i> On Little Cat Feet - Nightmargin</p>
+      <span class="tooltip">⬇ Click to play. ⬇</span>
+    </div>
+  </div>
+  <script>
+    function playAudio() {
+      var audio = document.getElementById('myAudio');
+      audio.volume = 1;
+      audio.play();
+    }
+    </script>
+  </body>
+</html>
+
+<!-- TODO - Add some more tabs at the bottom (aka Projects -> + some more) !-->
+<!-- TODO - Redo the README with everything updated and some new, more comprehensive information !-->

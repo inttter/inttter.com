@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colorflow</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preload" href="Mona-Sans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+<style>
+        .description p {
+            font-size: 16px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-family: 'Mona Sans', sans-serif;
+            font-size: 2.5rem;
+            text-decoration: underline;
+            color: rgb(160, 197, 197);
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            border-color: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+            transition: all 0.6s ease;
+        }
+
+        .song-info {
+         font-family: 'Mona Sans', sans-serif;
+         position: fixed;
+         bottom: 2px;
+         right: 10px;
+         color: white;
+         font-size: 14px;
+         padding: 5px 10px;
+         border-radius: 5px;
+         transition: color 0.3s ease;
+         cursor: pointer;
+         z-index: 999;
+        }
+
+       .song-info a {
+        text-decoration: none;
+        color: #ffffff;
+       }
+
+       .song-info:hover {
+        color: rgb(136, 194, 238);
+        transition: color 0.3s ease;
+       }
+
+        .special-text {
+        background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+       }
+
+        .return {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        background-color: transparent;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+       .return a {
+       margin: 0 10px;
+       font-family: 'Mona Sans', sans-serif;
+       color: grey;
+       font-size: 1.2rem;
+       text-decoration: overline;
+       border-radius: 4px;
+       padding: 6px 12px;
+       transition: background-color 0.5s ease;
+      }
+
+      .return a:hover {
+        background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      @media screen and (max-width: 768px) {
+      .song-info {
+        display: none;
+      }
+    }
+</style>
+<body style="background-color: rgb(11, 32, 39);">
+<div class="description">
+    <h1>Colorflow</h1>
+    <p>A simple-to-understand and useful gradient, or color previewer and generator.</p>
+    <p>Why? • I love working with CSS colors, so I wanted to create myself a tool that allowed me to see different CSS colors in different scenarios. I also wanted to use it to test other people's colors I found online if they didn't show how it looked.</p>
+    <img src="https://camo.githubusercontent.com/0cd37b29a74186000e3a663321de0a05057a7d971407dc9c23ff25853cbc98ec/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3839323833363837323131383736333534332f313138313332373835363538393038363738302f436f6c6f72666c6f772d49636f6e2e706e673f65783d36353830613834642669733d363536653333346426686d3d3335303136376534343935643965373965363964346566646634313430343864333332313562373138336638393932393166303561643339326534663031346126" width="150">
+    <a href="https://colorflow.cc"><span class="special-text">View</span></a>
+</div>
+
+<audio id="myAudio">
+  <source src="/assets/sound/On Little Cat Feet.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+<div class="song-info" onclick="playAudio()">
+    <p><i class="fas fa-compact-disc"></i> On Little Cat Feet - Nightmargin</p>
+    <span class="tooltip">⬇ Click to play. ⬇</span>
+</div>
+
+<div class="return">
+    <a href="/pages/home.html">Home</a>
+    <a href="../projects.html">Back to projects</a>
+    </div>
+
+<script>
+    function playAudio() {
+    var audio = document.getElementById('myAudio');
+    audio.volume = 1;
+    audio.play();
+    }
+</script>
+</body>
+</html>

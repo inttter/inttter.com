@@ -1,0 +1,47 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inter</title>
+    <link rel="stylesheet" href="/pages/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preload" href="Mona-Sans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  </head>
+  <body style="background-color: rgb(11, 32, 39);">
+      <div class="pfp">
+        <img src="/assets/social-images/pfp.png" width="128" height="128">
+      </div>
+      <div class="description">
+        <p>I have a passion for games, cats, and cars.</p>
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/inttter" target="_blank" rel="noopener noreferrer"><img src="/assets/social-images/github.png" alt="GitHub"></a>
+        <a href="https://steamcommunity.com/id/intermed" target="_blank" rel="noopener noreferrer"><img src="/assets/social-images/steam.png" alt="Steam"></a>
+        <a href="https://open.spotify.com/user/xboxtheman86" target="_blank" rel="noopener noreferrer"><img src="/assets/social-images/spotify.png" alt="Spotify"></a>
+        <a href="https://www.last.fm/user/intter" target="_blank" rel="noopener noreferrer"><img src="/assets/social-images/lastfm.png" alt="LastFM"></a>
+      </div>
+    
+      <div class="projects-link">
+        <a href="/pages/projects.html" class="project-btn"><span class="special-text">Projects</a></span>
+        <a href="/pages/license.html" class="project-btn"><span class="special-text">License</span></a>
+      </div>
+    
+      <audio id="myAudio">
+        <source src="/assets/sound/On Little Cat Feet.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div class="song-info" onclick="playAudio()">
+        <p><i class="fas fa-compact-disc"></i> On Little Cat Feet - Nightmargin</p>
+        <span class="tooltip">Click to play.</span>
+      </div>
+    </div>
+    <script>
+      function playAudio() { // function to play audio when "myAudio" is clicked as browser needs user interaction before playing the audio
+        var audio = document.getElementById('myAudio');
+        audio.volume = 1;
+        audio.play();
+      }
+      </script>
+    </body>
+  </html>
