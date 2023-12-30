@@ -25,7 +25,7 @@ body::before {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #18181B;
+  background-color: #1E1E2E;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -55,20 +55,20 @@ body::before {
 
   .social-links a {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0px;
   }
   
   .social-links img {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
-    transform: scale(1)
+    transform: scale(1);
   }
 
   .social-links img:hover {
     transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
-    transform: scale(0.8)
+    transform: scale(0.8);
   }
 
   .song-info {
@@ -121,12 +121,18 @@ body::before {
       }
       
       .pfp {
-      position: absolute;
-      margin-bottom: 200px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-    }
+        position: absolute;
+        margin-bottom: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+      }
+      
+      .pfp img {
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+      }
 
     .social-links {
       display: flex;
@@ -141,17 +147,21 @@ body::before {
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      max-width: 450px;
-      color: white;
+      max-width: 1000px;
+      color: transparent;
       font-family: 'Mona Sans', sans-serif;
-      font-size: 1.5rem;
+      font-size: 2.5rem;
       margin-top: 20px;
+      background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     
     .projects-link {
       position: absolute;
       display: flex;
-      bottom: 140px;
+      bottom: 180px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -182,11 +192,6 @@ body::before {
     }
 
     @media screen and (max-width: 568px) {
-      .pfp img {
-        width: 100px;
-        height: 100px;
-      }
-
       .description {
         width: 80%;
       }
@@ -194,7 +199,6 @@ body::before {
       .social-links img {
         width: 30px;
         height: 30px;
-        margin-top: 30px;
       }
     
       .projects-link {
