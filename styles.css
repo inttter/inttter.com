@@ -99,22 +99,37 @@ body::before {
     padding: 5px;
   }
 
-      /* Tooltip */
-      .tooltip {
-        position: absolute;
-        background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        padding: 5px;
-        border-radius: 4px;
-        bottom: calc(100% + 5px);
-        left: 50%;
-        transform: translateX(-50%);
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
-        z-index: 999;
-      }
+  .tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tooltip::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: #333 transparent transparent transparent;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Tooltip appearance on hover */
+  .tooltip:hover {
+    opacity: 1;
+  }
   
       .song-info:hover .tooltip {
         opacity: 1;
