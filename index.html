@@ -47,12 +47,71 @@
         <span class="tooltip">Click to play.</span>
       </div>
     </div>
+    <div class="toast" id="toast"><i class="fa-solid fa-circle-check" style="color: #3eb31e;"></i> Copied!</div>
     <script>
-      function playAudio() { // function to play audio when "myAudio" is clicked as browser needs user interaction before playing the audio
+    
+    function ConsoleLog(message, style) {
+    switch (style) {
+    case 'large':
+      console.log('%c' + message, 'font-size: 20px; color: #fff;');
+      break;
+    case 'highlight':
+      console.log('%c' + message, 'background-color: yellow; color: black;');
+      break;
+    default:
+      console.log(message);
+      break;
+      }
+    }
+      
+      function playAudio() {
         var audio = document.getElementById('myAudio');
         audio.volume = 1;
         audio.play();
+        ConsoleLog('View the original source of this audio here: https://www.youtube.com/watch?v=KVqwvU49JLg', 'large'); // original source for the song
       }
-      </script>
+    
+      document.addEventListener('DOMContentLoaded', function () {
+        const discordLogo = document.querySelector('.social-links img[alt="Discord"]');
+        const tooltipText = document.querySelector('.tooltip-text');
+        const toast = document.getElementById('toast');
+    
+        discordLogo.addEventListener('click', function () {
+          const textToCopy = tooltipText.textContent;
+    
+          navigator.clipboard.writeText(textToCopy)
+            .then(() => {
+              console.log('Copied to clipboard successfully!');
+              // after this, the toast notification shows
+              showToast();
+            })
+            .catch(err => {
+              console.error('Unable to copy text. The text did not copy. ', err);
+              alert('Unable to copy text. Please try again.');
+            });
+        });
+    
+        // the function to fade in the toast notification
+        function showToast() {
+          const toast = document.querySelector('.toast');
+          toast.style.display = 'block';
+          
+          setTimeout(() => {
+            toast.classList.add('fadeOutAnimation');
+          }, 2000);
+    
+          setTimeout(() => {
+            hideToast();
+          }, 2500);
+        }
+    
+        // the function to fade out the toast notification
+        function hideToast() {
+        const toast = document.querySelector('.toast');
+        toast.classList.remove('fadeOutAnimation');
+        toast.style.display = 'none';
+        }
+      });
+    </script>
     </body>
   </html>

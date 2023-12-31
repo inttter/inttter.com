@@ -244,6 +244,39 @@ body::before {
       transform: translateX(-50%);
     }
 
+    .toast {
+      position: fixed;
+      font-family: 'Mona Sans', sans-serif;
+      bottom: 20px;
+      left: 20px;
+      background-color: #CDD6F4;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: none;
+      z-index: 9999;
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+    
+    .fadeOutAnimation {
+      animation: fadeOut 0.5s ease forwards;
+    }
+
     @media screen and (max-width: 568px) {
       .description {
         width: 80%;
