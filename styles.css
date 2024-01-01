@@ -17,6 +17,7 @@ body {
   opacity: 0;
   animation: fadeInAnimation 0.5s ease-in forwards;
   position: relative;
+  cursor: none;
 }
 
 body::before {
@@ -64,13 +65,14 @@ body::before {
     border-radius: 50%;
     transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1), opacity 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
     transform: scale(1);
-    cursor: pointer;
+    cursor: none;
   }
   
   .social-links img:hover {
     transform: scale(1.15) rotate(10deg);
     opacity: 0.5;
   }
+  
   .song-info {
     font-family: 'Poppins', sans-serif;
     position: fixed;
@@ -81,7 +83,6 @@ body::before {
     padding: 5px 10px;
     border-radius: 5px;
     transition: color 0.3s ease;
-    cursor: pointer;
   }
   
   .song-info a {
@@ -126,7 +127,6 @@ body::before {
     transform: translateX(-50%);
   }
   
-  /* Tooltip appearance on hover */
   .tooltip:hover {
     opacity: 1;
   }
@@ -195,8 +195,8 @@ body::before {
       transition: all 0.3s ease;
       display: inline-block;
       text-align: center;
-      cursor: pointer;
       outline: none;
+      cursor: none;
     }
     
     .project-btn:hover,
@@ -338,6 +338,20 @@ body::before {
       transform: scaleX(0.97);
       transform-origin: bottom left;
     }
+
+    .custom-cursor {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      background-color: rgb(255, 255, 255, 0.5);
+      border-radius: 50%;
+      pointer-events: none;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+      z-index: 9999;
+    }
+
 
     @media screen and (max-width: 568px) {
       .body {
