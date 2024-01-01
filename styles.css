@@ -177,29 +177,47 @@ body::before {
     .projects-link {
       position: absolute;
       display: flex;
-      bottom: 180px;
+      bottom: 40px;
       left: 50%;
       transform: translateX(-50%);
     }
     
-    .projects-link .project-btn {
+    .project-btn,
+    .license-btn {
       font-family: 'Mona Sans', sans-serif;
       font-size: 1rem;
       text-decoration: none;
-      color: #fff;
-      padding: 8px 16px;
-      border-radius: 4px;
-      border: 2px solid transparent;
-      border-color: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
-      transition: all 0.6s ease;
-      white-space: nowrap;
+      color: #2ecc71;
+      padding: 12px 24px;
+      margin: 0 10px;
+      border-radius: 8px;
+      border: 2px solid #2ecc71;
+      background-color: transparent;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
     }
     
-    .projects-link .project-btn:hover {
-      border-color: green;
-      background-color: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    .project-btn:hover,
+    .license-btn:hover {
+      color: #fff;
+      background-color: #2ecc71;
     }
-
+    
+    /* New look for when button is clicked/active */
+    .project-btn:active,
+    .license-btn:active {
+      transform: translateY(2px);
+    }
+    
+    /* Additional Style for better accessibility on focus */
+    .project-btn:focus,
+    .license-btn:focus {
+      box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.5);
+    }
+    
     .special-text {
       background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
       -webkit-background-clip: text;
@@ -323,13 +341,17 @@ body::before {
     }
 
     @media screen and (max-width: 568px) {
+      .body {
+        overflow-x: hidden;
+      }
+      
       .description {
         width: 80%;
       }
     
       .social-links img {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
       }
     
       .projects-link {
@@ -339,9 +361,9 @@ body::before {
         padding: 10px;
       }
     
-      .project-btn {
-        white-space: nowrap;
-        margin: 5px;
-        position: static; 
+      .project-btn,
+      .license-btn {
+        width: 100%;
+        max-width: 300px;
       }
     }
