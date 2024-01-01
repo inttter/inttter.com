@@ -277,6 +277,51 @@ body::before {
       animation: fadeOut 0.5s ease forwards;
     }
 
+    .pfp {
+      perspective: 1000px;
+      display: inline-block;
+    }
+    
+    .profile-pic {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      transition: transform 0.5s ease;
+      transform-style: preserve-3d;
+    }
+    
+    .pfp:hover .profile-pic {
+      transform: rotateY(360deg) rotateX(-10deg) scale(1.2);
+    }
+
+    .hover-underline-animation {
+      display: inline-block;
+      position: relative;
+      background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+    
+    .hover-underline-animation::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #CDD6F4;
+      padding: 1px;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+      z-index: -1;
+    }
+    
+    .hover-underline-animation:hover::after {
+      transform: scaleX(0.97);
+      transform-origin: bottom left;
+    }
+
     @media screen and (max-width: 568px) {
       .description {
         width: 80%;
