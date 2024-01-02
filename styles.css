@@ -202,16 +202,14 @@ body::before {
     .project-btn:hover,
     .license-btn:hover {
       color: #fff;
-      background-color: #2ecc71;
+      box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.5);
     }
-    
-    /* New look for when button is clicked/active */
+  
     .project-btn:active,
     .license-btn:active {
       transform: translateY(2px);
     }
     
-    /* Additional Style for better accessibility on focus */
     .project-btn:focus,
     .license-btn:focus {
       box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.5);
