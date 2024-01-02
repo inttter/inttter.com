@@ -60,19 +60,26 @@ function ConsoleLog(message, style) {
   
   document.addEventListener("DOMContentLoaded", function () {
     const customCursor = document.querySelector(".custom-cursor");
-
-    document.addEventListener("mousemove", function (e) {
+  
+    function updateCursorPosition(e) {
       customCursor.style.top = e.clientY + "px";
       customCursor.style.left = e.clientX + "px";
-    });
-
-    document.addEventListener("mouseenter", function () {
+    }
+  
+    function showCursor() {
       customCursor.style.opacity = "1";
       customCursor.style.transform = "translate(-50%, -50%) scale(1)";
-    });
-
-    document.addEventListener("mouseleave", function () {
+    }
+  
+    function hideCursor() {
       customCursor.style.opacity = "0";
       customCursor.style.transform = "translate(-50%, -50%) scale(0)";
-    });
+    }
+  
+    document.addEventListener("mousemove", updateCursorPosition);
+    document.addEventListener("mouseenter", showCursor);
+    document.addEventListener("mouseleave", hideCursor);
+  
+    // Initialize cursor visibility on page load
+    showCursor(); // Optionally, you can call updateCursorPosition(e) here too if needed
   });
