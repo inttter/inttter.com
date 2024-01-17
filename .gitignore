@@ -1,0 +1,23 @@
+# Node.js
+node_modules/
+
+# Compiled CSS
+*.css
+
+# Output build directory
+build/
+
+# Cache and artifacts
+.cache/
+dist/
+.cache-loader/
+
+# Configuration files
+postcss.config.js
+tailwind.config.js
+
+# Fonts
+font/
+
+# VSCode
+.vscode/
