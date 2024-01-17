@@ -21,3 +21,7 @@ font/
 
 # VSCode
 .vscode/
+
+# NPM
+package-lock.json
+package.json
