@@ -6,6 +6,7 @@
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.10"
+    "@tailwindcss/typography": "^0.5.10",
+    "tailwindcss-pseudo-elements": "^2.0.0"
   }
 }
