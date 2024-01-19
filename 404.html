@@ -24,7 +24,7 @@
 </head>
 <body class="bg-[#1E1E2E] text-white text-center flex flex-col items-center justify-center font-sans min-h-screen font-lexend m-0 relative">
     <div class="header text-5xl md:text-5xl lg:text-6xl xl:text-9xl font-bold mb-2 md:mb-4 inline-flex relative bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.400),theme(colors.indigo.300),theme(colors.indigo.600),theme(colors.sky.400),theme(colors.indigo.400),theme(colors.indigo.400))] bg-[length:200%_auto] leading-tight pb-4 md:pb-6 border-b border-transparent hover:border-b-2 transition duration-300 ease-in-out">
-      404
+        404
     </div>
 
     <div class="description text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl text-white mb-4 sm:mb-8 font-sans font-bold max-w-2xl">
@@ -40,6 +40,13 @@
           console.clear();
           }, 2000); // 2 seconds in milliseconds
       </script>
+            <script>
+                if (typeof window !== 'undefined' && window.history && window.history.replaceState) {
+                    const currentPath = window.location.pathname;
+                    const newPath = currentPath.replace(/\.html$/, '');
+                    window.history.replaceState('', '', newPath);
+                }
+            </script>
       <script src="functions.js"></script>
       <script src="//unpkg.com/alpinejs" defer></script>
   </body>
