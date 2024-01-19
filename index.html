@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,23 +18,33 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="Cars, games, and mediocore code.">
+    <meta name="description" content="Inter's personal website.">
     <meta name="author" content="Inter">
     <title>Inter</title>
 </head>
 <body class="bg-[#1E1E2E] text-white text-center flex flex-col items-center justify-center font-sans min-h-screen font-lexend m-0 relative">
 
     <div class="container mx-auto text-center relative">
-      <div class="flex flex-col items-center justify-center">
-          <div class="flex items-center justify-center">
-              <div class="pfp text-5xl md:text-5xl lg:text-6xl xl:text-9xl font-bold mb-2 md:mb-4 inline-flex relative bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.400),theme(colors.indigo.300),theme(colors.indigo.600),theme(colors.sky.400),theme(colors.indigo.400),theme(colors.indigo.400))] bg-[length:200%_auto] font-sans mt-2">
-                  <div class="avatar">
-                    <div class="ring ring-primary w-40 rounded-full ring-offset-base-100 ring-offset-2" data-theme="dark">
-                      <img src="assets/social-images/pfp.png" />
+        <div class="flex items-center justify-center relative">
+            <div class="pfp text-5xl md:text-5xl lg:text-6xl xl:text-9xl font-bold mb-2 md:mb-4 inline-flex relative bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.400),theme(colors.indigo.300),theme(colors.indigo.600),theme(colors.sky.400),theme(colors.indigo.400),theme(colors.indigo.400))] bg-[length:200%_auto] font-sans mt-2">
+                <div class="avatar tooltip tooltip-primary" data-tip="Inter">
+                    <div class="ring ring-primary w-40 rounded-full ring-offset-base-100 ring-offset-2 relative">
+                        <img src="assets/social-images/pfp.png" />
                     </div>
-                  </div>
-              </div>
-          </div>
+                </div>
+            </div>
+        </div>
+        
+          <div class="fixed bottom-0 right-0 mb-4 mr-4">
+            <div class="tooltip tooltip-primary tooltip-left relative social-icon" data-tip="Click here to donate!">
+                <a href="pages/donate.html" target="_blank" rel="noopener noreferrer">
+                <img src="assets/social-images/donating/donate.gif" alt="Donate" class="w-16 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-12">
+            </a>
+        </div>
+    </div>
+
+    <div class="badge badge-primary font-bold" id="timeBadge"></div>
+
           <div class="links mx-auto text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl text-white mb-4 mt-10 sm:mb-8 font-mono max-w-2xl flex items-center justify-center space-x-3 lg:space-x-5">
             <!-- GitHub -->
             <a href="https://github.com/inttter" target="_blank" rel="noopener noreferrer" class="social-icon">
@@ -52,7 +62,7 @@
             </a>
         
             <!-- Spotify -->
-            <a href="https://open.spotify.com/user/xboxtheman86" target="_blank" rel="noopener noreferrer" class="social-icon">
+            <a href="https://open.spotify.com/user/xboxtheman86" target="_blank" rel="noopener noreferrer" class="social-icon relative" onmouseover="showSpotifyImage()" onmouseout="hideSpotifyImage()">
                 <img src="assets/social-images/spotify.svg" alt="Spotify" class="w-12 h-12 rounded-full transition-transform transform hover:scale-110 hover:rotate-12">
             </a>
         
@@ -68,63 +78,54 @@
         </div>
 </div>
 </div>
-  
+
+<div class="absolute bottom-0 left-0 mb-4 ml-4 text-xs text-gray-500">©️ 2024 • MIT License
+</div>
+ 
       <script>
           setInterval(() => {
           console.clear();
-          }, 2000); // 2 seconds in milliseconds
+          }, 5000);
       </script>
       <script src="functions.js"></script>
       <script src="//unpkg.com/alpinejs" defer></script>
       <script>
-          // Add an event listener for clicking the logo
           document.getElementById('discordIcon').addEventListener('click', function () {
             const textToCopy = this.getAttribute('data-tip');
         
-            // Create a textarea element to facilitate copying text to the clipboard
             const textarea = document.createElement('textarea');
             textarea.value = textToCopy;
             document.body.appendChild(textarea);
         
-            // Select the text and copy it to the clipboard
             textarea.select();
             document.execCommand('copy');
         
-            // Remove the temporary textarea
             document.body.removeChild(textarea);
         
-            // Create a tooltip element
             const tooltip = document.createElement('div');
-            tooltip.className = 'tooltip-text tooltip absolute bg-gray-800 text-white p-2 w-40 rounded-md opacity-0 invisible transition-opacity duration-300 ease-in-out left-1/2 transform -translate-x-1/2 top-[2px]'; // Adjust top value
+            tooltip.className = 'tooltip-text tooltip absolute bg-gray-800 text-white p-2 w-40 rounded-lg opacity-0 invisible transition-opacity duration-300 ease-in-out left-1/2 transform -translate-x-1/2 top-[10px]';
         
-            // Create a Font Awesome icon
             const icon = document.createElement('i');
-            icon.className = 'fa-solid fa-circle-check mr-2'; // Use the desired icon class
-            icon.style.color = '#63E6BE'; // Set the desired color
+            icon.className = 'fa-solid fa-circle-check mr-2';
+            icon.style.color = '#63E6BE';
         
-            // Append the icon to the tooltip
             tooltip.appendChild(icon);
         
-            // Append the text content to the tooltip
             tooltip.appendChild(document.createTextNode('Copied!'));
         
-            // Append the tooltip to the body
             document.body.appendChild(tooltip);
         
-            // Create a fade-in effect
             setTimeout(function () {
               tooltip.classList.remove('invisible');
               tooltip.classList.add('visible');
               tooltip.style.opacity = 1;
             }, 10);
-        
-            // Create a fade-out effect after 3 seconds
+
             setTimeout(function () {
               tooltip.classList.remove('visible');
               tooltip.classList.add('invisible');
               tooltip.style.opacity = 0;
-        
-              // Remove the tooltip from the body
+
               setTimeout(function () {
                 document.body.removeChild(tooltip);
               }, 300);
@@ -133,13 +134,10 @@
         </script>
             <script>
               document.addEventListener('DOMContentLoaded', function() {
-                  // Check if the current page exists
                   if (window.location.href.indexOf('404.html') === -1) {
                       fetch(window.location.href, { method: 'HEAD' })
                           .then(response => {
-                              // Check if the status code is not in the successful range
                               if (!response.ok) {
-                                  // Redirect to the custom 404 page
                                   window.location.href = '404.html';
                               }
                           })
@@ -149,5 +147,30 @@
                   }
               });
           </script>
+            <script>
+                const getCurrentHour = () => {
+                  const now = new Date();
+                  return now.getHours();
+                };
+            
+                const updateBadge = () => {
+                  const timeBadge = document.getElementById('timeBadge');
+                  const currentHour = getCurrentHour();
+            
+                  if (currentHour >= 5 && currentHour <= 11) {
+                    timeBadge.textContent = '🌅 • it\'s the morning for me';
+                  } else if (currentHour >= 12 && currentHour <= 17) {
+                    timeBadge.textContent = '☀️ • it\'s the afternoon for me';
+                  } else if (currentHour >= 18 && currentHour <= 21) {
+                    timeBadge.textContent = '🌇 • it\'s the evening for me';
+                  } else {
+                    timeBadge.textContent = '🌙 • it\'s the night for me';
+                  }
+                };
+            
+                updateBadge();
+            
+                setInterval(updateBadge, 60000);
+              </script>
   </body>
   </html>
