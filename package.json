@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.10",
+    "preline": "^2.0.3",
     "tailwindcss-pseudo-elements": "^2.0.0"
   }
 }
