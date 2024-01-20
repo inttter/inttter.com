@@ -1,119 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Consolas:wght@400&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.css" rel="stylesheet" type="text/css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="Inter's personal website.">
-    <meta name="author" content="Inter">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Consolas:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta
+      name="msapplication-config"
+      content="/assets/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Inter's personal website." />
+    <meta name="author" content="Inter" />
     <title>Inter</title>
-</head>
-<body class="bg-[#1E1E2E] text-white text-center flex flex-col items-center justify-center font-sans min-h-screen font-lexend m-0 relative">
-
+  </head>
+  <body
+    class="bg-[#1E1E2E] text-white text-center flex flex-col items-center justify-center font-sans min-h-screen font-lexend m-0 relative"
+  >
     <div class="container mx-auto text-center relative">
-        <div class="flex items-center justify-center relative">
-            <div class="pfp text-5xl md:text-5xl lg:text-6xl xl:text-9xl font-bold mb-2 md:mb-4 inline-flex relative bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.400),theme(colors.indigo.300),theme(colors.indigo.600),theme(colors.sky.400),theme(colors.indigo.400),theme(colors.indigo.400))] bg-[length:200%_auto] font-sans mt-2">
-                <div class="h-96 w-full carousel carousel-vertical rounded-box">
-                    <div class="carousel-item h-full">
-                        <img src="/assets/carousel/1.jpg" class="object-cover w-full h-full" />
-                    </div> 
-                    <div class="carousel-item h-full">
-                      <img src="/assets/carousel/2.jpg" class="object-cover w-full h-full" />
-                    </div> 
-                    <div class="carousel-item h-full">
-                      <img src="/assets/carousel/3.jpg" class="object-cover w-full h-full" />
-                    </div> 
-                    <div class="carousel-item h-full">
-                      <img src="/assets/carousel/4.jpg" class="object-cover w-full h-full" />
-                    </div> 
-                    <div class="carousel-item h-full">
-                      <img src="/assets/carousel/5.jpg" class="object-cover w-full h-full" />
-                    </div> 
-                    <div class="carousel-item h-full">
-                      <img src="/assets/carousel/6.jpg" class="object-cover w-full h-full" />
-                    </div> 
-                    <div class="carousel-item h-full">
-                      <img src="/assets/carousel/7.jpg" class="object-cover w-full h-full" />
-                    </div>
-                    <div class="carousel-item h-full">
-                        <img src="/assets/carousel/8.jpg" class="object-cover w-full h-full" />
-                      </div>
-                    <div class="carousel-item h-full">
-                        <img src="/assets/carousel/9.jpg" class="object-cover w-full h-full" />
-                      </div>
-                    <div class="carousel-item h-full">
-                        <img src="/assets/carousel/10.jpg" class="object-cover w-full h-full" />
-                      </div>
-                    <div class="carousel-item h-full">
-                        <img src="/assets/carousel/11.jpg" class="object-cover w-full h-full" />
-                      </div>
-                      <div class="carousel-item h-full">
-                        <img src="/assets/carousel/12.jpg" class="object-cover w-full h-full" />
-                      </div>
-                    <div class="carousel-item h-full">
-                        <img src="/assets/carousel/13.jpg" class="object-cover w-full h-full" />
-                      </div>
-                  </div>
-                    </div>
-                </div>
+      <div class="flex items-center justify-center relative">
+        <div
+          class="pfp text-5xl md:text-5xl lg:text-6xl xl:text-9xl font-bold mb-2 md:mb-4 inline-flex relative bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.400),theme(colors.indigo.300),theme(colors.indigo.600),theme(colors.sky.400),theme(colors.indigo.400),theme(colors.indigo.400))] bg-[length:200%_auto] font-sans mt-2"
+        >
+          <div class="h-96 w-full carousel carousel-vertical rounded-box">
+            <div class="carousel-item h-full">
+              <img
+                src="/assets/carousel/1.jpg"
+                class="object-cover w-full h-full"
+              />
             </div>
+            <div class="carousel-item h-full">
+              <img
+                src="/assets/carousel/2.jpg"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="carousel-item h-full">
+              <img
+                src="/assets/carousel/3.jpg"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="carousel-item h-full">
+              <img
+                src="/assets/carousel/4.jpg"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="carousel-item h-full">
+              <img
+                src="/assets/carousel/5.jpg"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="carousel-item h-full">
+              <img
+                src="/assets/carousel/6.jpg"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="carousel-item h-full">
+              <img
+                src="/assets/carousel/7.jpg"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="carousel-item h-full">
+              <img
+                src="/assets/carousel/8.jpg"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="carousel-item h-full">
+              <img
+                src="/assets/carousel/9.jpg"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="carousel-item h-full">
+              <img
+                src="/assets/carousel/10.jpg"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="carousel-item h-full">
+              <img
+                src="/assets/carousel/11.jpg"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="carousel-item h-full">
+              <img
+                src="/assets/carousel/12.jpg"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="carousel-item h-full">
+              <img
+                src="/assets/carousel/13.jpg"
+                class="object-cover w-full h-full"
+              />
+            </div>
+          </div>
         </div>
-        <p class="font-mono">Scroll or use <kbd class="kbd">↓</kbd> to see more images.</p>
+      </div>
+    </div>
+    <p class="font-mono">
+      Scroll or use <kbd class="kbd">↓</kbd> to see more images.
+    </p>
 
-<div class="absolute bottom-0 left-0 mb-4 ml-4 text-xs text-gray-500 flex items-center">
-    ©️ 2024 • MIT License • 
-    <a href="mailto:me@inttter.com" class="flex items-center">
-        <img src="/assets/social-images/email.svg" width="12" class="ml-2 mr-1"> me@inttter.com
-    </a>
-</div>
+    <div
+      class="absolute bottom-0 left-0 mb-4 ml-4 text-xs text-gray-500 flex items-center"
+    >
+      ©️ 2024 • MIT License •
+      <a href="mailto:me@inttter.com" class="flex items-center">
+        <img
+          src="/assets/social-images/email.svg"
+          width="12"
+          class="ml-2 mr-1"
+        />
+        me@inttter.com
+      </a>
+    </div>
 
-<div class="absolute bottom-0 right-4 mb-4 ml-4 text-xs text-gray-500 flex items-center">
-    Images are courtesy of me, taken by me.
-</div>
+    <div
+      class="absolute bottom-0 right-4 mb-4 ml-4 text-xs text-gray-500 flex items-center"
+    >
+      Images are courtesy of me, taken by me.
+    </div>
 
-      <script>
-          setInterval(() => {
-          console.clear();
-          }, 5000);
-      </script>
-      <script src="//unpkg.com/alpinejs" defer></script>
-            <script>
-              document.addEventListener('DOMContentLoaded', function() {
-                  if (window.location.href.indexOf('404.html') === -1) {
-                      fetch(window.location.href, { method: 'HEAD' })
-                          .then(response => {
-                              if (!response.ok) {
-                                  window.location.href = '404.html';
-                              }
-                          })
-                          .catch(error => {
-                              console.error('Error checking page existence:', error);
-                          });
-                  }
-              });
-          </script>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    if (typeof window !== 'undefined' && window.history && window.history.replaceState) {
-                        const currentPath = window.location.pathname;
-                        const newPath = currentPath.replace(/\.html$/, '');
-                        window.history.replaceState('', '', newPath);
-                    }
-                });
-            </script>
+    <script>
+      setInterval(() => {
+        console.clear();
+      }, 5000);
+    </script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.location.href.indexOf("404.html") === -1) {
+          fetch(window.location.href, { method: "HEAD" })
+            .then((response) => {
+              if (!response.ok) {
+                window.location.href = "404.html";
+              }
+            })
+            .catch((error) => {
+              console.error("Error checking page existence:", error);
+            });
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (
+          typeof window !== "undefined" &&
+          window.history &&
+          window.history.replaceState
+        ) {
+          const currentPath = window.location.pathname;
+          const newPath = currentPath.replace(/\.html$/, "");
+          window.history.replaceState("", "", newPath);
+        }
+      });
+    </script>
   </body>
-  </html>
+</html>

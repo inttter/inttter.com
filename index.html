@@ -1,182 +1,306 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Consolas:wght@400&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.css" rel="stylesheet" type="text/css">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="Inter's personal website.">
-    <meta name="author" content="Inter">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Consolas:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta
+      name="msapplication-config"
+      content="assets/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Inter's personal website." />
+    <meta name="author" content="Inter" />
     <title>Inter</title>
-</head>
-<body class="bg-[#1E1E2E] text-white text-center flex flex-col items-center justify-center font-sans min-h-screen font-lexend m-0 relative">
-
+  </head>
+  <body
+    class="bg-[#1E1E2E] text-white text-center flex flex-col items-center justify-center font-sans min-h-screen font-lexend m-0 relative"
+  >
     <div class="container mx-auto text-center relative">
-        <div class="flex items-center justify-center relative">
-            <div class="pfp text-5xl md:text-5xl lg:text-6xl xl:text-9xl font-bold mb-2 md:mb-4 inline-flex relative bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.400),theme(colors.indigo.300),theme(colors.indigo.600),theme(colors.sky.400),theme(colors.indigo.400),theme(colors.indigo.400))] bg-[length:200%_auto] font-sans mt-2">
-                <div class="avatar tooltip tooltip-primary" data-tip="Inter">
-                    <div class="ring ring-primary w-40 rounded-full ring-offset-base-100 ring-offset-2 relative">
-                        <img src="assets/social-images/pfp.png" />
-                    </div>
-                </div>
+      <div class="flex items-center justify-center relative">
+        <div
+          class="pfp text-5xl md:text-5xl lg:text-6xl xl:text-9xl font-bold mb-2 md:mb-4 inline-flex relative bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.400),theme(colors.indigo.300),theme(colors.indigo.600),theme(colors.sky.400),theme(colors.indigo.400),theme(colors.indigo.400))] bg-[length:200%_auto] font-sans mt-2"
+        >
+          <div class="avatar tooltip tooltip-primary" data-tip="Inter">
+            <div
+              class="ring ring-primary w-40 rounded-full ring-offset-base-100 ring-offset-2 relative"
+            >
+              <img src="assets/social-images/pfp.png" />
             </div>
+          </div>
         </div>
-        
-          <div class="fixed bottom-0 right-0 mb-4 mr-4">
-            <div class="tooltip tooltip-primary tooltip-left relative social-icon" data-tip="Click here to donate!">
-                <a href="https://github.com/sponsors/inttter" target="_blank" rel="noopener noreferrer">
-                <img src="assets/social-images/donate.gif" alt="Donate" class="w-16 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-12">
-            </a>
+      </div>
+
+      <div class="fixed bottom-0 right-0 mb-4 mr-4">
+        <div
+          class="tooltip tooltip-primary tooltip-left relative social-icon"
+          data-tip="Click here to donate!"
+        >
+          <a
+            href="https://github.com/sponsors/inttter"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="assets/social-images/donate.gif"
+              alt="Donate"
+              class="w-16 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-12"
+            />
+          </a>
         </div>
+      </div>
+
+      <div class="badge badge-primary font-bold" id="timeBadge"></div>
+
+      <div
+        class="links mx-auto text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl text-white mb-4 mt-10 sm:mb-8 font-mono max-w-2xl flex items-center justify-center space-x-3 lg:space-x-5"
+      >
+        <!-- GitHub -->
+        <a
+          href="https://github.com/inttter"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-icon"
+        >
+          <img
+            src="assets/social-images/github.svg"
+            alt="GitHub"
+            class="w-10 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-12"
+          />
+        </a>
+
+        <!-- Discord -->
+        <div
+          id="discordIcon"
+          class="tooltip tooltip-primary relative social-icon"
+          data-tip="iinter"
+        >
+          <img
+            src="assets/social-images/discord.svg"
+            alt="Discord"
+            class="w-10 h-10 rounded-md transition-transform transform hover:scale-110 hover:rotate-12"
+          />
+        </div>
+
+        <!-- Steam -->
+        <a
+          href="https://steamcommunity.com/id/intermed"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-icon"
+        >
+          <img
+            src="assets/social-images/steam.svg"
+            alt="Steam"
+            class="w-10 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-12"
+          />
+        </a>
+
+        <!-- Spotify -->
+        <a
+          href="https://open.spotify.com/user/xboxtheman86"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-icon relative"
+          onmouseover="showSpotifyImage()"
+          onmouseout="hideSpotifyImage()"
+        >
+          <img
+            src="assets/social-images/spotify.svg"
+            alt="Spotify"
+            class="w-10 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-12"
+          />
+        </a>
+
+        <!-- NPM -->
+        <a
+          href="https://www.npmjs.com/~intter"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-icon"
+        >
+          <img
+            src="assets/social-images/npm.svg"
+            alt="NPM"
+            class="w-10 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-12"
+          />
+        </a>
+
+        <!-- LastFM -->
+        <a
+          href="https://www.last.fm/user/intter"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-icon"
+        >
+          <img
+            src="assets/social-images/lastfm.svg"
+            alt="LastFM"
+            class="w-10 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-12"
+          />
+        </a>
+      </div>
     </div>
 
-    <div class="badge badge-primary font-bold" id="timeBadge"></div>
+    <div
+      class="absolute bottom-0 left-0 mb-4 ml-4 text-xs text-gray-500 flex items-center"
+    >
+      ©️ 2024 • MIT License •
+      <a href="mailto:me@inttter.com" class="flex items-center">
+        <img
+          src="assets/social-images/email.svg"
+          width="12"
+          class="ml-2 mr-1"
+        />
+        me@inttter.com •
+      </a>
+      <a href="pages/pictures.html" class="m-1">Pictures</a>
+    </div>
 
-          <div class="links mx-auto text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl text-white mb-4 mt-10 sm:mb-8 font-mono max-w-2xl flex items-center justify-center space-x-3 lg:space-x-5">
-            <!-- GitHub -->
-            <a href="https://github.com/inttter" target="_blank" rel="noopener noreferrer" class="social-icon">
-                <img src="assets/social-images/github.svg" alt="GitHub" class="w-10 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-12">
-            </a>
-        
-            <!-- Discord -->
-            <div id="discordIcon" class="tooltip tooltip-primary relative social-icon" data-tip="iinter">
-                <img src="assets/social-images/discord.svg" alt="Discord" class="w-10 h-10 rounded-md transition-transform transform hover:scale-110 hover:rotate-12">
-            </div>
-        
-            <!-- Steam -->
-            <a href="https://steamcommunity.com/id/intermed" target="_blank" rel="noopener noreferrer" class="social-icon">
-                <img src="assets/social-images/steam.svg" alt="Steam" class="w-10 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-12">
-            </a>
-        
-            <!-- Spotify -->
-            <a href="https://open.spotify.com/user/xboxtheman86" target="_blank" rel="noopener noreferrer" class="social-icon relative" onmouseover="showSpotifyImage()" onmouseout="hideSpotifyImage()">
-                <img src="assets/social-images/spotify.svg" alt="Spotify" class="w-10 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-12">
-            </a>
-        
-            <!-- NPM -->
-            <a href="https://www.npmjs.com/~intter" target="_blank" rel="noopener noreferrer" class="social-icon">
-                <img src="assets/social-images/npm.svg" alt="NPM" class="w-10 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-12">
-            </a>
-        
-            <!-- LastFM -->
-            <a href="https://www.last.fm/user/intter" target="_blank" rel="noopener noreferrer" class="social-icon">
-                <img src="assets/social-images/lastfm.svg" alt="LastFM" class="w-10 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-12">
-            </a>
-        </div>
-</div>
-</div>
+    <script>
+      setInterval(() => {
+        console.clear();
+      }, 5000);
+    </script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script>
+      document
+        .getElementById("discordIcon")
+        .addEventListener("click", function () {
+          const textToCopy = this.getAttribute("data-tip");
 
-<div class="absolute bottom-0 left-0 mb-4 ml-4 text-xs text-gray-500 flex items-center">
-    ©️ 2024 • MIT License •
-    <a href="mailto:me@inttter.com" class="flex items-center">
-        <img src="assets/social-images/email.svg" width="12" class="ml-2 mr-1"> me@inttter.com •
-    </a>
-    <a href="pages/pictures.html" class="m-1">Pictures</a>
-</div>
+          const textarea = document.createElement("textarea");
+          textarea.value = textToCopy;
+          document.body.appendChild(textarea);
 
-      <script>
-          setInterval(() => {
-          console.clear();
-          }, 5000);
-      </script>
-      <script src="//unpkg.com/alpinejs" defer></script>
-      <script>
-          document.getElementById('discordIcon').addEventListener('click', function () {
-            const textToCopy = this.getAttribute('data-tip');
-        
-            const textarea = document.createElement('textarea');
-            textarea.value = textToCopy;
-            document.body.appendChild(textarea);
-        
-            textarea.select();
-            document.execCommand('copy');
-        
-            document.body.removeChild(textarea);
-        
-            const tooltip = document.createElement('div');
-            tooltip.className = 'tooltip-text tooltip absolute bg-gray-800 text-white p-2 w-40 rounded-lg opacity-0 invisible transition-opacity duration-300 ease-in-out left-1/2 transform -translate-x-1/2 top-[10px]';
-        
-            const icon = document.createElement('i');
-            icon.className = 'fa-solid fa-circle-check mr-2';
-            icon.style.color = '#63E6BE';
-        
-            tooltip.appendChild(icon);
-        
-            tooltip.appendChild(document.createTextNode('Copied!'));
-        
-            document.body.appendChild(tooltip);
-        
-            setTimeout(function () {
-              tooltip.classList.remove('invisible');
-              tooltip.classList.add('visible');
-              tooltip.style.opacity = 1;
-            }, 10);
+          textarea.select();
+          document.execCommand("copy");
+
+          document.body.removeChild(textarea);
+
+          const tooltip = document.createElement("div");
+          tooltip.className =
+            "tooltip-text tooltip absolute bg-gray-800 text-white p-2 w-40 rounded-lg opacity-0 invisible transition-opacity duration-300 ease-in-out left-1/2 transform -translate-x-1/2 top-[10px]";
+
+          const icon = document.createElement("i");
+          icon.className = "fa-solid fa-circle-check mr-2";
+          icon.style.color = "#63E6BE";
+
+          tooltip.appendChild(icon);
+
+          tooltip.appendChild(document.createTextNode("Copied!"));
+
+          document.body.appendChild(tooltip);
+
+          setTimeout(function () {
+            tooltip.classList.remove("invisible");
+            tooltip.classList.add("visible");
+            tooltip.style.opacity = 1;
+          }, 10);
+
+          setTimeout(function () {
+            tooltip.classList.remove("visible");
+            tooltip.classList.add("invisible");
+            tooltip.style.opacity = 0;
 
             setTimeout(function () {
-              tooltip.classList.remove('visible');
-              tooltip.classList.add('invisible');
-              tooltip.style.opacity = 0;
+              document.body.removeChild(tooltip);
+            }, 300);
+          }, 3000);
+        });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.location.href.indexOf("404.html") === -1) {
+          fetch(window.location.href, { method: "HEAD" })
+            .then((response) => {
+              if (!response.ok) {
+                window.location.href = "404.html";
+              }
+            })
+            .catch((error) => {
+              console.error("Error checking page existence:", error);
+            });
+        }
+      });
+    </script>
+    <script>
+      const getTimeInTimeZone = (timezone) => {
+        const now = new Date();
+        const options = {
+          timeZone: timezone,
+          hour12: false,
+          hour: "2-digit",
+          minute: "2-digit",
+        };
+        return now.toLocaleTimeString("en-US", options);
+      };
 
-              setTimeout(function () {
-                document.body.removeChild(tooltip);
-              }, 300);
-            }, 3000);
-          });
-        </script>
-            <script>
-              document.addEventListener('DOMContentLoaded', function() {
-                  if (window.location.href.indexOf('404.html') === -1) {
-                      fetch(window.location.href, { method: 'HEAD' })
-                          .then(response => {
-                              if (!response.ok) {
-                                  window.location.href = '404.html';
-                              }
-                          })
-                          .catch(error => {
-                              console.error('Error checking page existence:', error);
-                          });
-                  }
-              });
-          </script>
-<script>
-  const getTimeInTimeZone = (timezone) => {
-      const now = new Date();
-      const options = { timeZone: timezone, hour12: false, hour: '2-digit', minute: '2-digit' };
-      return now.toLocaleTimeString('en-US', options);
-  };
+      const updateBadge = () => {
+        const timeBadge = document.getElementById("timeBadge");
+        const currentTime = getTimeInTimeZone("Europe/London");
+        const currentHour = parseInt(currentTime.split(":")[0]);
 
-  const updateBadge = () => {
-      const timeBadge = document.getElementById('timeBadge');
-      const currentTime = getTimeInTimeZone('Europe/London');
-      const currentHour = parseInt(currentTime.split(':')[0]);
-
-      if (currentHour >= 5 && currentHour <= 11) {
+        if (currentHour >= 5 && currentHour <= 11) {
           timeBadge.textContent = `${currentTime} 🌅 morning`;
-      } else if (currentHour >= 12 && currentHour <= 17) {
+        } else if (currentHour >= 12 && currentHour <= 17) {
           timeBadge.textContent = `${currentTime} ☀️ afternoon`;
-      } else if (currentHour >= 18 && currentHour <= 21) {
+        } else if (currentHour >= 18 && currentHour <= 21) {
           timeBadge.textContent = `${currentTime} 🌇 evening`;
-      } else {
+        } else {
           timeBadge.textContent = `${currentTime} 🌙 night`;
-      }
-  };
+        }
+      };
 
-  updateBadge();
+      updateBadge();
 
-  setInterval(updateBadge, 60000);
-</script>
+      setInterval(updateBadge, 60000);
+    </script>
   </body>
-  </html>
+</html>
