@@ -149,7 +149,7 @@
 <script>
   const getTimeInTimeZone = (timezone) => {
       const now = new Date();
-      const options = { timeZone: timezone, hour12: true, hour: '2-digit', minute: '2-digit' };
+      const options = { timeZone: timezone, hour12: false, hour: '2-digit', minute: '2-digit' };
       return now.toLocaleTimeString('en-US', options);
   };
 
