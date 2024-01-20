@@ -146,30 +146,32 @@
                   }
               });
           </script>
-            <script>
-                const getCurrentHour = () => {
-                  const now = new Date();
-                  return now.getHours();
-                };
-            
-                const updateBadge = () => {
-                  const timeBadge = document.getElementById('timeBadge');
-                  const currentHour = getCurrentHour();
-            
-                  if (currentHour >= 5 && currentHour <= 11) {
-                    timeBadge.textContent = '🌅 • it\'s the morning for me';
-                  } else if (currentHour >= 12 && currentHour <= 17) {
-                    timeBadge.textContent = '☀️ • it\'s the afternoon for me';
-                  } else if (currentHour >= 18 && currentHour <= 21) {
-                    timeBadge.textContent = '🌇 • it\'s the evening for me';
-                  } else {
-                    timeBadge.textContent = '🌙 • it\'s the night for me';
-                  }
-                };
-            
-                updateBadge();
-            
-                setInterval(updateBadge, 60000);
-              </script>
+<script>
+  const getTimeInTimeZone = (timezone) => {
+      const now = new Date();
+      const options = { timeZone: timezone, hour12: true, hour: '2-digit', minute: '2-digit' };
+      return now.toLocaleTimeString('en-US', options);
+  };
+
+  const updateBadge = () => {
+      const timeBadge = document.getElementById('timeBadge');
+      const currentTime = getTimeInTimeZone('Europe/London');
+      const currentHour = parseInt(currentTime.split(':')[0]);
+
+      if (currentHour >= 5 && currentHour <= 11) {
+          timeBadge.textContent = `${currentTime} 🌅 morning`;
+      } else if (currentHour >= 12 && currentHour <= 17) {
+          timeBadge.textContent = `${currentTime} ☀️ afternoon`;
+      } else if (currentHour >= 18 && currentHour <= 21) {
+          timeBadge.textContent = `${currentTime} 🌇 evening`;
+      } else {
+          timeBadge.textContent = `${currentTime} 🌙 night`;
+      }
+  };
+
+  updateBadge();
+
+  setInterval(updateBadge, 60000);
+</script>
   </body>
   </html>
