@@ -32,167 +32,100 @@
     <meta name="twitter:url" content="https://inttter.com">
     <title>Inter</title>
 </head>
-
-<body class="bg-[#1E1E2E] text-white text-center flex flex-col items-center justify-center font-sans min-h-screen font-lexend m-0 relative">
-    <div class="container mx-auto text-center relative">
-        <div class="flex items-center justify-center relative">
-            <div class="pfp text-5xl md:text-5xl lg:text-6xl xl:text-9xl font-bold mb-2 md:mb-4 inline-flex relative bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.400),theme(colors.indigo.300),theme(colors.indigo.600),theme(colors.sky.400),theme(colors.indigo.400),theme(colors.indigo.400))] bg-[length:200%_auto] font-sans mt-2">
-                <div class="avatar tooltip tooltip-accent" data-tip="Inter">
-                    <div class="ring ring-accent w-40 rounded-full ring-offset-base-100 ring-offset-2 relative">
-                        <img src="assets/social-images/pfp.png" />
-                    </div>
+<body class="bg-gray-900 text-gray-300 font-mono h-screen flex flex-col justify-center items-center">
+    <div class="w-full sm:w-1/2 mx-auto">
+        <!-- Terminal Container -->
+        <div class="w-full shadow-2xl rounded-xl bg-gray-800 border-black">
+            <!-- Terminal Title -->
+            <div class="flex justify-between items-center bg-gray-800 p-2 rounded-t-lg">
+                <div class="text-sm text-gray-400">~ /root</div>
+                <div class="flex space-x-1">
+                    <div class="h-4 w-4  bg-red-500 rounded-full"></div>
+                    <div class="h-4 w-4 bg-yellow-500 rounded-full"></div>
+                    <div class="h-4 w-4 bg-green-500 rounded-full"></div>
+                </div>
+            </div>
+            <!-- Terminal Body -->
+            <div class="h-48 overflow-y-auto px-4 pt-2 pb-1 text-gray-500" id="terminalBody">
+                <p># <code class="text-indigo-500">"socials"</code> - shows my socials</p>
+                <p># <code class="text-indigo-500">"donate"</code> - shows my donation methods</p>
+                <p># <code class="text-indigo-500">"time"</code> - shows my current time</p>
+                <p># <code class="text-indigo-500">"clear"</code> - clears the terminal</p>
+                <p># <code class="text-indigo-500">"help"</code> - brings up this menu</p>
+            </div>
+            <!-- Terminal Input -->
+            <div class="bg-gray-800 px-4 py-2 rounded-b-lg">
+                <div class="flex items-center">
+                    <div class="text-sm text-gray-400">~</div>
+                    <input type="text" class="bg-transparent border-none focus:outline-none text-sm text-gray-300 ml-1" placeholder="" id="terminalInput">
                 </div>
             </div>
         </div>
-
-        <div class="fixed bottom-0 right-0 mb-4 mr-4">
-            <div class="tooltip tooltip-primary tooltip-left relative social-icon font-bold" data-tip="Click here to donate!">
-                <a href="https://github.com/sponsors/inttter" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/social-images/donate.gif" alt="Donate" class="w-16 h-10" />
-                </a>
-            </div>
-        </div>
-
-        <div class="badge badge-secondary font-bold" id="timeBadge"></div>
-
-        <div class="links mx-auto text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl text-white mb-4 mt-10 sm:mb-8 font-mono max-w-2xl flex items-center justify-center space-x-3 lg:space-x-5">
-            <!-- GitHub -->
-            <a href="https://github.com/inttter" target="_blank" rel="noopener noreferrer" class="social-icon">
-                <img src="assets/social-images/github.svg" alt="GitHub" class="w-10 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-3 filter grayscale hover:grayscale-0" />
-            </a>
-
-            <!-- Discord -->
-            <div id="discordIcon" class="tooltip tooltip-accent relative social-icon font-bold font-sans" data-tip="iinter">
-                <img src="assets/social-images/discord.svg" alt="Discord" class="w-10 h-10 rounded-md transition-transform transform hover:scale-110 hover:rotate-3 filter grayscale hover:grayscale-0" />
-            </div>
-
-            <!-- Steam -->
-            <a href="https://steamcommunity.com/id/intermed" target="_blank" rel="noopener noreferrer" class="social-icon">
-                <img src="assets/social-images/steam.svg" alt="Steam" class="w-10 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-3 filter grayscale hover:grayscale-0" />
-            </a>
-
-            <!-- Spotify -->
-            <a href="https://open.spotify.com/user/xboxtheman86" target="_blank" rel="noopener noreferrer" class="social-icon relative">
-                <img src="assets/social-images/spotify.svg" alt="Spotify" class="w-10 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-3 filter grayscale hover:grayscale-0" />
-            </a>
-
-            <!-- NPM -->
-            <a href="https://www.npmjs.com/~intter" target="_blank" rel="noopener noreferrer" class="social-icon">
-                <img src="assets/social-images/npm.svg" alt="NPM" class="w-10 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-3 filter grayscale hover:grayscale-0" />
-            </a>
-
-            <!-- LastFM -->
-            <a href="https://www.last.fm/user/intter" target="_blank" rel="noopener noreferrer" class="social-icon">
-                <img src="assets/social-images/lastfm.svg" alt="LastFM" class="w-10 h-10 rounded-full transition-transform transform hover:scale-110 hover:rotate-3 filter grayscale hover:grayscale-0" />
-            </a>
-        </div>
-    </div>
-
-    <div class="absolute bottom-0 left-0 mb-4 ml-4 text-xs text-gray-500 flex items-center">
-        ©️ 2024 • MIT License •
-        <a href="mailto:me@inttter.com" class="flex items-center hover:text-white transition transform duration-400">
-            <img src="assets/social-images/email.svg" width="12" class="ml-2 mr-1" />
-            me@inttter.com •
-        </a>
-        <a href="pages/pictures.html" class="m-1 hover:text-white transition transform duration-400">Pictures</a>
     </div>
 
     <script>
-        setInterval(() => {
-            console.clear();
-        }, 5000);
-    </script>
-    <script src="//unpkg.com/alpinejs" defer></script>
-    <script>
-        document.getElementById("discordIcon").addEventListener("click", function () {
-            const textToCopy = this.getAttribute("data-tip");
-            const textarea = document.createElement("textarea");
-            textarea.value = textToCopy;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand("copy");
-            document.body.removeChild(textarea);
-            const tooltip = document.createElement("div");
-            tooltip.className = "tooltip-text tooltip absolute bg-gray-800 text-white p-2 w-40 rounded-lg opacity-0 invisible transition-opacity duration-300 ease-in-out left-1/2 transform -translate-x-1/2 top-[10px]";
-            const icon = document.createElement("i");
-            icon.className = "fa-solid fa-circle-check mr-2";
-            icon.style.color = "#63E6BE";
-            tooltip.appendChild(icon);
-            tooltip.appendChild(document.createTextNode("Copied!"));
-            document.body.appendChild(tooltip);
-            setTimeout(function () {
-                tooltip.classList.remove("invisible");
-                tooltip.classList.add("visible");
-                tooltip.style.opacity = 1;
-            }, 10);
-            setTimeout(function () {
-                tooltip.classList.remove("visible");
-                tooltip.classList.add("invisible");
-                tooltip.style.opacity = 0;
-                setTimeout(function () {
-                    document.body.removeChild(tooltip);
-                }, 300);
-            }, 3000);
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            if (window.location.href.indexOf("404.html") === -1) {
-                fetch(window.location.href, { method: "HEAD" })
-                    .then((response) => {
-                        if (!response.ok) {
-                            window.location.href = "404.html";
-                        }
-                    })
-                    .catch((error) => {
-                        console.error("Error checking page existence:", error);
-                    });
-            }
-        });
-    </script>
-    <script>
-        const getTimeInTimeZone = (timezone) => {
-            const now = new Date();
-            const options = {
-                timeZone: timezone,
-                hour12: false,
-                hour: "2-digit",
-                minute: "2-digit",
-            };
-            return now.toLocaleTimeString("en-US", options);
-        };
+const terminalInput = document.getElementById('terminalInput');
+const terminalBody = document.getElementById('terminalBody');
 
-        const updateBadge = () => {
-            const timeBadge = document.getElementById("timeBadge");
-            const currentTime = getTimeInTimeZone("Europe/London");
-            const currentHour = parseInt(currentTime.split(":")[0]);
+terminalInput.addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+        const inputValue = terminalInput.value.trim().toLowerCase();
+        terminalBody.innerHTML = '';
+        if (inputValue === 'socials') {
+            terminalBody.innerHTML += '<br>'
+            terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://github.com/inttter"><span class="flex items-center"><img src="assets/social-images/github.svg" alt="GitHub" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> inttter </span></p></a>';            terminalBody.innerHTML += '<p class="text-indigo-300"><a href="https://discord.com/users/514106760299151372"><span class="flex items-center"><img src="assets/social-images/discord.svg" alt="Discord" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> iinter </p></a>';
+            terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://steamcommunity.com/id/intermed/"><span class="flex items-center"><img src="assets/social-images/steam.svg" alt="Steam" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> inter </p></a>';
+            terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://open.spotify.com/user/xboxtheman86"><span class="flex items-center"><img src="assets/social-images/spotify.svg" alt="Spotify" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> inter </p></a>'
+            terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://www.npmjs.com/~intter"><span class="flex items-center"><img src="assets/social-images/npm.svg" alt="NPM" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> intter </p></a>'
+            terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://last.fm/user/intter">'
+            terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://www.last.fm/user/intter" <span class="flex items-center"><img src="assets/social-images/lastfm.svg" alt="Last.fm" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> intter </p></a>'
+        } else if (inputValue === 'clear') {
+            terminalBody.innerHTML += ''
+        } else if (inputValue === 'donate') {
+            terminalBody.innerHTML += '<p class="text-emerald-300">💰 donations help cover domain renewal fees.</p>'
+            terminalBody.innerHTML += '<br>'
+            terminalBody.innerHTML += '<p class="text-pink-300">👇 feel free to donate at any of these links:</p>'
+            terminalBody.innerHTML += '<br>'
+            terminalBody.innerHTML += '<p class="text-yellow-700"><a href="https://ko-fi.com/intter">☕ kofi: <u class="text-violet-300">https://ko-fi.com/intter</u></p></a>'
+            terminalBody.innerHTML += '<p class="text-pink-300"><a href="https://github.com/sponsors/inttter">🩷 sponsors: <u class="text-violet-300">https://github.com/sponsors/inttter</u></p></a>'
+        } else if (inputValue === 'time') {
+                const currentTime = new Date();
+                const hours = currentTime.getHours();
+                const timeOfDay = getTimeOfDay(hours);
+                const formattedTime = formatTime(hours, currentTime.getMinutes());
 
-            if (currentHour >= 5 && currentHour <= 11) {
-                timeBadge.textContent = `${currentTime} 🌅 morning`;
-            } else if (currentHour >= 12 && currentHour <= 17) {
-                timeBadge.textContent = `${currentTime} ☀️ afternoon`;
-            } else if (currentHour >= 18 && currentHour <= 21) {
-                timeBadge.textContent = `${currentTime} 🌇 evening`;
+                terminalBody.innerHTML += `<p class="text-green-300">${formattedTime}</p>`;
+                terminalBody.innerHTML += '<br>'
+                terminalBody.innerHTML += `<p class="text-indigo-300">it's currently the ${timeOfDay}</p>`
+        } else if (inputValue === 'help') {
+                terminalBody.innerHTML += '<p># <code class="text-indigo-500">"socials"</code> - shows my socials</p>'
+                terminalBody.innerHTML += '<p># <code class="text-indigo-500">"donate"</code> - shows my donation methods</p>'
+                terminalBody.innerHTML += '<p># <code class="text-indigo-500">"time"</code> - shows my current time</p>'
+                terminalBody.innerHTML += '<p># <code class="text-indigo-500">"clear"</code> - clears the terminal</p>'
             } else {
-                timeBadge.textContent = `${currentTime} 🌙 night`;
+                terminalBody.innerHTML += '<p class="text-red-300"><span class="bg-red-300 text-black p-1">ERROR</span> This is not a valid command.</p>';
             }
-        };
+            terminalInput.value = '';
+        }
+    });
 
-        updateBadge();
+    function getTimeOfDay(hour) {
+        if (hour >= 5 && hour < 12) {
+            return 'morning 🌅';
+        } else if (hour >= 12 && hour < 18) {
+            return 'afternoon 😎';
+        } else if (hour >= 18 && hour < 20) {
+            return 'evening 🌇';
+        } else {
+            return 'night 🌉';
+        }
+    }
 
-        setInterval(updateBadge, 60000);
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const avatarElement = document.querySelector(".avatar");
-            
-            avatarElement.addEventListener("click", function () {
-                const audio = new Audio("assets/sound/ohmygah.mp3");
-                audio.volume = 0.05;
-                audio.play();
-            });
-        });
+    function formatTime(hours, minutes) {
+        const formattedHours = hours.toString().padStart(2, '0');
+        const formattedMinutes = minutes.toString().padStart(2, '0');
+        return `${formattedHours}:${formattedMinutes}`;
+    }
     </script>
 </body>
-
 </html>
