@@ -33,61 +33,81 @@
     <title>Inter</title>
 </head>
 <body class="bg-gray-900 text-gray-300 font-mono h-screen flex flex-col justify-center items-center">
-    <div class="w-full sm:w-1/2 mx-auto">
-        <!-- Terminal Container -->
-        <div class="w-full shadow-2xl rounded-xl bg-gray-800 border-black">
-            <!-- Terminal Title -->
-            <div class="flex justify-between items-center bg-gray-800 p-2 rounded-t-lg">
-                <div class="text-sm text-gray-400">~ /root</div>
-                <div class="flex space-x-1">
-                    <div class="h-4 w-4  bg-red-500 rounded-full"></div>
-                    <div class="h-4 w-4 bg-yellow-500 rounded-full"></div>
-                    <div class="h-4 w-4 bg-green-500 rounded-full"></div>
-                </div>
+    <div class="w-full max-w-2xl mx-auto shadow-2xl rounded-xl bg-gray-800 border-black p-6">
+        <!-- Terminal Title -->
+        <div class="flex justify-between items-center bg-gray-800 p-2 rounded-t-lg">
+            <div class="text-lg text-gray-400">~ /root</div>
+            <div class="flex space-x-1">
+                <div class="h-4 w-4 bg-red-500 rounded-full"></div>
+                <div class="h-4 w-4 bg-yellow-500 rounded-full"></div>
+                <div class="h-4 w-4 bg-green-500 rounded-full"></div>
             </div>
-            <!-- Terminal Body -->
-            <div class="h-48 overflow-y-auto px-4 pt-2 pb-1 text-gray-500" id="terminalBody">
-                <p># <code class="text-indigo-500">"socials"</code> - shows my socials</p>
-                <p># <code class="text-indigo-500">"donate"</code> - shows my donation methods</p>
-                <p># <code class="text-indigo-500">"time"</code> - shows my current time</p>
-                <p># <code class="text-indigo-500">"clear"</code> - clears the terminal</p>
-                <p># <code class="text-indigo-500">"help"</code> - brings up this menu</p>
-            </div>
-            <!-- Terminal Input -->
-            <div class="bg-gray-800 px-4 py-2 rounded-b-lg">
-                <div class="flex items-center">
-                    <div class="text-sm text-gray-400">~</div>
-                    <input type="text" class="bg-transparent border-none focus:outline-none text-sm text-gray-300 ml-1" placeholder="" id="terminalInput">
-                </div>
+        </div>
+        <!-- Terminal Body -->
+        <div class="h-64 overflow-y-auto px-6 pt-4 pb-2 text-lg text-gray-500" id="terminalBody">
+            <p># <code class="text-indigo-500">"socials"</code> - shows my socials</p>
+            <p># <code class="text-indigo-500">"donate"</code> - shows my donation methods</p>
+            <p># <code class="text-indigo-500">"time"</code> - shows my current time</p>
+            <p># <code class="text-indigo-500">"clear"</code> - clears the terminal</p>
+            <p># <code class="text-indigo-500">"help"</code> - brings up this menu</p>
+        </div>
+        <!-- Terminal Input -->
+        <div class="bg-gray-800 px-6 py-4 rounded-b-lg">
+            <div class="flex items-center">
+                <div class="text-lg text-gray-400">~</div>
+                <input type="text" class="bg-transparent border-none focus:outline-none text-lg text-gray-300 placeholder-gray-600 ml-1 w-full" id="terminalInput">
             </div>
         </div>
     </div>
 
+
     <script>
+        const placeholderMessages = [
+          "try typing 'socials'",
+          "typing 'help' brings up that menu above!",
+          "try typing 'time'",
+          "type a certain persons' name from Azumanga Daioh...",
+        ];
+      
+        // Function to set a random placeholder message
+        function setRandomPlaceholder() {
+          const randomIndex = Math.floor(Math.random() * placeholderMessages.length);
+          const inputElement = document.getElementById('terminalInput');
+          inputElement.placeholder = placeholderMessages[randomIndex];
+        }
+      
+        // Set an initial placeholder message
+        setRandomPlaceholder();
+      
+        // Periodically change the placeholder message
+        setInterval(setRandomPlaceholder, 5000); // Change every 5 seconds (5000 milliseconds)
+      </script>
+
+<script>
 const terminalInput = document.getElementById('terminalInput');
 const terminalBody = document.getElementById('terminalBody');
 
 terminalInput.addEventListener('keyup', function(event) {
-    if (event.key === 'Enter') {
-        const inputValue = terminalInput.value.trim().toLowerCase();
-        terminalBody.innerHTML = '';
+        if (event.key === 'Enter') {
+            const inputValue = terminalInput.value.trim().toLowerCase();
+            terminalBody.innerHTML = '';
         if (inputValue === 'socials') {
-            terminalBody.innerHTML += '<br>'
-            terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://github.com/inttter"><span class="flex items-center"><img src="assets/social-images/github.svg" alt="GitHub" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> inttter </span></p></a>';            terminalBody.innerHTML += '<p class="text-indigo-300"><a href="https://discord.com/users/514106760299151372"><span class="flex items-center"><img src="assets/social-images/discord.svg" alt="Discord" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> iinter </p></a>';
-            terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://steamcommunity.com/id/intermed/"><span class="flex items-center"><img src="assets/social-images/steam.svg" alt="Steam" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> inter </p></a>';
-            terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://open.spotify.com/user/xboxtheman86"><span class="flex items-center"><img src="assets/social-images/spotify.svg" alt="Spotify" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> inter </p></a>'
-            terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://www.npmjs.com/~intter"><span class="flex items-center"><img src="assets/social-images/npm.svg" alt="NPM" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> intter </p></a>'
-            terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://last.fm/user/intter">'
-            terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://www.last.fm/user/intter" <span class="flex items-center"><img src="assets/social-images/lastfm.svg" alt="Last.fm" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> intter </p></a>'
+                terminalBody.innerHTML += '<br>'
+                terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://github.com/inttter"><span class="flex items-center"><img src="assets/social-images/github.svg" alt="GitHub" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> inttter </span></p></a>';            terminalBody.innerHTML += '<p class="text-indigo-300"><a href="https://discord.com/users/514106760299151372"><span class="flex items-center"><img src="assets/social-images/discord.svg" alt="Discord" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> iinter </p></a>';
+                terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://steamcommunity.com/id/intermed/"><span class="flex items-center"><img src="assets/social-images/steam.svg" alt="Steam" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> inter </p></a>';
+                terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://open.spotify.com/user/xboxtheman86"><span class="flex items-center"><img src="assets/social-images/spotify.svg" alt="Spotify" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> inter </p></a>'
+                terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://www.npmjs.com/~intter"><span class="flex items-center"><img src="assets/social-images/npm.svg" alt="NPM" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> intter </p></a>'
+                terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://last.fm/user/intter">'
+                terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://www.last.fm/user/intter" <span class="flex items-center"><img src="assets/social-images/lastfm.svg" alt="Last.fm" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> intter </p></a>'
         } else if (inputValue === 'clear') {
             terminalBody.innerHTML += ''
         } else if (inputValue === 'donate') {
-            terminalBody.innerHTML += '<p class="text-emerald-300">💰 donations help cover domain renewal fees.</p>'
-            terminalBody.innerHTML += '<br>'
-            terminalBody.innerHTML += '<p class="text-pink-300">👇 feel free to donate at any of these links:</p>'
-            terminalBody.innerHTML += '<br>'
-            terminalBody.innerHTML += '<p class="text-yellow-700"><a href="https://ko-fi.com/intter">☕ kofi: <u class="text-violet-300">https://ko-fi.com/intter</u></p></a>'
-            terminalBody.innerHTML += '<p class="text-pink-300"><a href="https://github.com/sponsors/inttter">🩷 sponsors: <u class="text-violet-300">https://github.com/sponsors/inttter</u></p></a>'
+                terminalBody.innerHTML += '<p class="text-emerald-300">💰 donations help cover domain renewal fees.</p>'
+                terminalBody.innerHTML += '<br>'
+                terminalBody.innerHTML += '<p class="text-pink-300">👇 feel free to donate at any of these links:</p>'
+                terminalBody.innerHTML += '<br>'
+                terminalBody.innerHTML += '<p class="text-pink-300"><a href="https://ko-fi.com/intter">☕ kofi: <u class="text-violet-300">https://ko-fi.com/intter</u></p></a>'
+                terminalBody.innerHTML += '<p class="text-pink-300"><a href="https://github.com/sponsors/inttter">🩷 sponsors: <u class="text-violet-300">https://github.com/sponsors/inttter</u></p></a>'
         } else if (inputValue === 'time') {
                 const currentTime = new Date();
                 const hours = currentTime.getHours();
@@ -102,9 +122,13 @@ terminalInput.addEventListener('keyup', function(event) {
                 terminalBody.innerHTML += '<p># <code class="text-indigo-500">"donate"</code> - shows my donation methods</p>'
                 terminalBody.innerHTML += '<p># <code class="text-indigo-500">"time"</code> - shows my current time</p>'
                 terminalBody.innerHTML += '<p># <code class="text-indigo-500">"clear"</code> - clears the terminal</p>'
+                terminalBody.innerHTML += '<p># <code class="text-indigo-500">"help"</code> - brings up this menu</p>'
+            } else if (inputValue === 'osaka') {
+                const videoUrl = 'http://127.0.0.1:5500/assets/video/well-done.mp4';
+                window.open(videoUrl, '_blank');
             } else {
                 terminalBody.innerHTML += '<p class="text-red-300"><span class="bg-red-300 text-black p-1">ERROR</span> This is not a valid command.</p>';
-            }
+        }
             terminalInput.value = '';
         }
     });
