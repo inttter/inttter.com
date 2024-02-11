@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Consolas:wght@400&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.css" rel="stylesheet" type="text/css" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
@@ -32,65 +31,97 @@
     <meta name="twitter:url" content="https://inttter.com">
     <title>Inter</title>
 </head>
-<body class="bg-gray-900 text-gray-300 font-mono h-screen flex flex-col justify-center items-center">
+<style>
+/* this all hides the scrollbar */
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+</style>
+<body class="bg-gray-900 text-gray-300 font-mono h-screen flex flex-col justify-center items-center no-scrollbar">
     <div class="w-full max-w-2xl mx-auto shadow-2xl rounded-xl bg-gray-800 border-black p-6">
-        <!-- Terminal Title -->
+<!-- Terminal Title -->
         <div class="flex justify-between items-center bg-gray-800 p-2 rounded-t-lg">
-            <div class="text-lg text-gray-400">~ /root</div>
+          <div class="text-lg text-gray-400">~ guest@main</div>
             <div class="flex space-x-1">
-                <div class="h-4 w-4 bg-red-500 rounded-full"></div>
-                <div class="h-4 w-4 bg-yellow-500 rounded-full"></div>
-                <div class="h-4 w-4 bg-green-500 rounded-full"></div>
-            </div>
-        </div>
+              <div class="h-4 w-4 bg-red-500 rounded-full hover:bg-red-700" id="closeButtonRed"></div>
+              <div class="h-4 w-4 bg-yellow-500 rounded-full hover:bg-yellow-700"></div>
+              <div class="h-4 w-4 bg-green-500 rounded-full hover:bg-green-700"></div>
+          </div>
+    </div>
         <!-- Terminal Body -->
-        <div class="h-64 overflow-y-auto px-6 pt-4 pb-2 text-lg text-gray-500" id="terminalBody">
-            <p># <code class="text-indigo-500">"socials"</code> - shows my socials</p>
-            <p># <code class="text-indigo-500">"donate"</code> - shows my donation methods</p>
-            <p># <code class="text-indigo-500">"time"</code> - shows my current time</p>
-            <p># <code class="text-indigo-500">"clear"</code> - clears the terminal</p>
-            <p># <code class="text-indigo-500">"help"</code> - brings up this menu</p>
+        <div class="h-64 overflow-y-auto px-6 pt-4 pb-2 text-lg text-gray-500 no-scrollbar" id="terminalBody">
+            <p class="text-8xl text-emerald-300 tracking-wider text">
+                <pre class="text-emerald-300 text-sm">
+██╗███╗   ██╗████████╗███████╗██████╗ 
+██║████╗  ██║╚══██╔══╝██╔════╝██╔══██╗
+██║██╔██╗ ██║   ██║   █████╗  ██████╔╝
+██║██║╚██╗██║   ██║   ██╔══╝  ██╔══██╗
+██║██║ ╚████║   ██║   ███████╗██║  ██║
+╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═
+                </pre>
+            </p>            
+            <p class="text-gray-500 text-sm">⚝ he/him ⚝ | <span class="text-gray-500 text-sm" id="currentTime"></span></p>
+            <p class="text-gray-300">To see available commands, type <span class="text-[#519975]">'help'</span></p>
+            <p class="text-gray-300">To view the repository, click <a href="https://github.com/inttter/inttter.com" class="hover:text-emerald-300" style="text-decoration: underline;">here</a></p>
         </div>
         <!-- Terminal Input -->
         <div class="bg-gray-800 px-6 py-4 rounded-b-lg">
             <div class="flex items-center">
-                <div class="text-lg text-gray-400">~</div>
+                <div class="text-lg text-[#519975]">guest@inttter.com:~$</div>
                 <input type="text" class="bg-transparent border-none focus:outline-none text-lg text-gray-300 placeholder-gray-600 ml-1 w-full" id="terminalInput">
             </div>
         </div>
     </div>
 
-
-    <script>
-        const placeholderMessages = [
-          "try typing 'socials'",
-          "typing 'help' brings up that menu above!",
-          "try typing 'time'",
-          "type a certain persons' name from Azumanga Daioh...",
-        ];
-      
-        // Function to set a random placeholder message
-        function setRandomPlaceholder() {
-          const randomIndex = Math.floor(Math.random() * placeholderMessages.length);
-          const inputElement = document.getElementById('terminalInput');
-          inputElement.placeholder = placeholderMessages[randomIndex];
-        }
-      
-        // Set an initial placeholder message
-        setRandomPlaceholder();
-      
-        // Periodically change the placeholder message
-        setInterval(setRandomPlaceholder, 5000); // Change every 5 seconds (5000 milliseconds)
-      </script>
+    <div id="modal" class="fixed inset-0 items-center flex justify-center bg-black bg-opacity-50 z-50 hidden backdrop-blur-sm">
+        <div class="bg-gray-900 border-t-4 border-yellow-500 rounded-b text-white px-4 py-3 shadow-lg rounded-xl" role="alert">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-semibold text-yellow-400"><i class="fa-solid fa-triangle-exclamation" style="color: #FFD43B;"></i> Wait a minute...</h2>
+                <button id="closeButton" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <p>Sorry, you can't close the terminal.</p>
+            <p>Here's a <span class="text-green-300">cat 😼</span> to make up for it.</p>
+            <br>
+            <div class="tooltip tooltip-top tooltip-accent" data-tip="A cat sleeping... 💤">
+                <img src="assets/popups/warning-from-kitty.webp" width="450" alt="Warning From Kitty 😼" class="rounded-2xl">
+            </div>
+        </div>
+    </div>
 
 <script>
+const commandFunctions = {
+    'about': 'shows some info about me',
+    'socials': 'shows my socials',
+    'donate': 'shows my donation methods',
+    'commits': 'shows my latest commits',
+    'repo': 'opens the repository for this page',
+    'banner': 'shows the banner displayed on page load',
+    'clear': 'clears the terminal',
+    'help': 'you are here!!'
+};
+
+let helpContent = '';
+for (const command in commandFunctions) {
+    helpContent += `<p><span class="text-[#73abad]">${command}</span> &nbsp;&nbsp <span class="text-[#519975]">${commandFunctions[command]}</p>`;
+}
+
 const terminalInput = document.getElementById('terminalInput');
 const terminalBody = document.getElementById('terminalBody');
 
 terminalInput.addEventListener('keyup', function(event) {
-        if (event.key === 'Enter') {
-            const inputValue = terminalInput.value.trim().toLowerCase();
-            terminalBody.innerHTML = '';
+    if (event.key === 'Enter') {
+        const inputValue = terminalInput.value.trim().toLowerCase();
+        terminalBody.innerHTML = '';
         if (inputValue === 'socials') {
                 terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://github.com/inttter"><span class="flex items-center"><img src="assets/social-images/github.svg" alt="GitHub" class="w-4 h-4 filter grayscale-0 mr-2" /> inttter </span></p></a>';            terminalBody.innerHTML += '<p class="text-indigo-300"><a href="https://discord.com/users/514106760299151372"><span class="flex items-center"><img src="assets/social-images/discord.svg" alt="Discord" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> iinter </p></a>';
                 terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://steamcommunity.com/id/intermed/"><span class="flex items-center"><img src="assets/social-images/steam.svg" alt="Steam" class="w-4 h-4 filter grayscale-0 mr-2" /> inter </p></a>';
@@ -102,46 +133,81 @@ terminalInput.addEventListener('keyup', function(event) {
                 } else if (inputValue === 'clear') {
             terminalBody.innerHTML += ''
         } else if (inputValue === 'donate') {
-                terminalBody.innerHTML += '<p class="text-emerald-300">💰 donations help cover domain renewal fees.</p>'
-                terminalBody.innerHTML += '<br>'
-                terminalBody.innerHTML += '<p class="text-pink-300">👇 feel free to donate at any of these links:</p>'
-                terminalBody.innerHTML += '<br>'
-                terminalBody.innerHTML += '<p class="text-pink-300"><a href="https://ko-fi.com/intter">☕ kofi: <u class="text-violet-300">https://ko-fi.com/intter</u></p></a>'
-                terminalBody.innerHTML += '<p class="text-pink-300"><a href="https://github.com/sponsors/inttter">🩷 sponsors: <u class="text-violet-300">https://github.com/sponsors/inttter</u></p></a>'
-        } else if (inputValue === 'time') {
-                const currentTime = new Date();
-                const hours = currentTime.getHours();
-                const timeOfDay = getTimeOfDay(hours);
-                const formattedTime = formatTime(hours, currentTime.getMinutes());
-
-                terminalBody.innerHTML += `<p class="text-green-300">${formattedTime}</p>`;
-                terminalBody.innerHTML += '<br>'
-                terminalBody.innerHTML += `<p class="text-indigo-300">it's currently the ${timeOfDay}</p>`
+            terminalBody.innerHTML += '<p class="text-emerald-300">💰 donations help cover domain renewal fees.</p>';
+            terminalBody.innerHTML += '<br>';
+            terminalBody.innerHTML += '<p class="text-pink-300">👇 feel free to donate at any of these links:</p>';
+            terminalBody.innerHTML += '<br>';
+            terminalBody.innerHTML += '<p class="text-pink-300"><a href="https://ko-fi.com/intter">☕ kofi: <u class="text-violet-300">https://ko-fi.com/intter</u></a></p>';
+            terminalBody.innerHTML += '<p class="text-pink-300"><a href="https://github.com/sponsors/inttter">🩷 sponsors: <u class="text-violet-300">https://github.com/sponsors/inttter</u></a></p>';
         } else if (inputValue === 'help') {
-                terminalBody.innerHTML += '<p># <code class="text-indigo-500">"socials"</code> - shows my socials</p>'
-                terminalBody.innerHTML += '<p># <code class="text-indigo-500">"donate"</code> - shows my donation methods</p>'
-                terminalBody.innerHTML += '<p># <code class="text-indigo-500">"time"</code> - shows my current time</p>'
-                terminalBody.innerHTML += '<p># <code class="text-indigo-500">"clear"</code> - clears the terminal</p>'
-                terminalBody.innerHTML += '<p># <code class="text-indigo-500">"help"</code> - brings up this menu</p>'
-            } else if (inputValue === 'osaka') {
-                const videoUrl = 'https://inttter.com/assets/video/well-done.mp4';
-                window.open(videoUrl, '_blank');
-            } else {
-                terminalBody.innerHTML += '<p class="text-red-300"><span class="bg-red-300 text-black p-1">ERROR</span> This is not a valid command.</p>';
+            terminalBody.innerHTML += helpContent;
+        } else if (inputValue === 'osaka') {
+            const videoUrl = 'https://inttter.com/assets/video/well-done.mp4';
+            window.open(videoUrl, '_blank');
+        } else if (inputValue === 'about') {
+            terminalBody.innerHTML += '<p class="text-emerald-300">i\'m Inter, from Romania/London. <span class="text-gray-500"># <i class="fa-solid fa-arrow-down"></i> Scroll</span></p>';
+            terminalBody.innerHTML += '<br>';
+            terminalBody.innerHTML += '<p class="text-yellow-300">i work on stuff you might find useful, such as:</p>';
+            terminalBody.innerHTML += '<br>';
+            terminalBody.innerHTML += '<p class="text-cyan-300"><a href="https://mdbcli.xyz" class="text-underline hover:text-emerald-300" style="text-decoration: underline">mdbadges-cli</a> - Find badges without ever leaving the terminal. <a href="https://npmjs.org/package/mdbadges-cli" class="badge badge-secondary hover:rotate-6 hover:scale-125 hover: tooltip tooltip-secondary tooltip-top" data-tip="visit on npm!"><i class="fa-solid fa-circle-arrow-down"></i></p>';
+            terminalBody.innerHTML += '<br>';
+            terminalBody.innerHTML += '<p class="text-cyan-300"><a href="https://github.com/inttter/md-badges" class="text-underline hover:text-emerald-300" style="text-decoration: underline">md-badges</a> - The definitive badge list for your projects.</p>';
+            terminalBody.innerHTML += '<br>';
+            terminalBody.innerHTML += '<p class="text-cyan-300"><a href="https://colorflow.cc" class="text-underline hover:text-emerald-300" style="text-decoration: underline">Colorflow</a> - A simple-to-understand and useful website to preview and generate colors.</p>';
+        } else if (inputValue === 'commits') {
+            getRecentCommits('inttter', 10);
+        } else if (inputValue === 'repo') {
+            const repoUrl = 'https://github.com/inttter/inttter.com';
+            window.open(repoUrl, '_blank');
+            terminalBody.innerHTML += '<p class="text-emerald-300">Click the link below if the page does not open:</p>';
+            terminalBody.innerHTML += '<br>'
+            terminalBody.innerHTML += '<p class="text-cyan-300"><a href="https://github.com/inttter/inttter.com" class="text-underline hover:text-emerald-300" style="text-decoration: underline">https://github.com/inttter/inttter.com</a></p>';
+        } else if (inputValue === 'banner') {
+    terminalBody.innerHTML += `
+    <pre class="text-emerald-300">
+██╗███╗   ██╗████████╗███████╗██████╗ 
+██║████╗  ██║╚══██╔══╝██╔════╝██╔══██╗
+██║██╔██╗ ██║   ██║   █████╗  ██████╔╝
+██║██║╚██╗██║   ██║   ██╔══╝  ██╔══██╗
+██║██║ ╚████║   ██║   ███████╗██║  ██║
+╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═
+    </pre>`;
+        } else {
+            terminalBody.innerHTML += '<p class="text-red-300"><span class="bg-red-300 text-black p-1">ERROR</span> This is not a valid command.</p>';
         }
-            terminalInput.value = '';
-        }
-    });
+        terminalInput.value = '';
+    }
+});
+
+function getRecentCommits(username, count) {
+    fetch(`https://api.github.com/users/${username}/events`)
+        .then(response => response.json())
+        .then(events => {
+            const pushEvents = events.filter(event => event.type === 'PushEvent');
+            pushEvents.slice(0, count).forEach(event => {
+                const commits = event.payload.commits;
+                commits.forEach(commit => {
+                    const commitName = commit.message.split('\n')[0]; // Get only the first line of the commit message
+                    terminalBody.innerHTML += `<p class="text-green-300">${commitName}</p>`;
+                    terminalBody.innerHTML += '<hr class="my-4 border-gray-600">';
+                });
+            });
+        })
+        .catch(error => {
+            terminalBody.innerHTML += `<p class="text-red-300">Failed to fetch recent commit names for ${username}. Please try again later.</p>`;
+            console.error(`Error fetching recent commit names for ${username}:`, error);
+        });
+}
 
     function getTimeOfDay(hour) {
         if (hour >= 5 && hour < 12) {
-            return 'morning 🌅';
+            return '🌅';
         } else if (hour >= 12 && hour < 18) {
-            return 'afternoon 😎';
+            return '😎';
         } else if (hour >= 18 && hour < 20) {
-            return 'evening 🌇';
+            return '🌇';
         } else {
-            return 'night 🌉';
+            return '🌉';
         }
     }
 
@@ -150,6 +216,49 @@ terminalInput.addEventListener('keyup', function(event) {
         const formattedMinutes = minutes.toString().padStart(2, '0');
         return `${formattedHours}:${formattedMinutes}`;
     }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('modal');
+        const closeButton = document.getElementById('closeButton');
+        const closeButtonRed = document.getElementById('closeButtonRed');
+        const redBackground = document.querySelector('.bg-red-500');
+        
+        closeButton.addEventListener('click', function() {
+            modal.classList.add('hidden');
+        });
+    
+        closeButtonRed.addEventListener('click', function() {
+            modal.classList.add('hidden');
+        });
+        
+        redBackground.addEventListener('click', function() {
+            modal.classList.remove('hidden');
+        });
+    
+        });
+    </script>
+<script>
+    function updateCurrentTime() {
+        const currentTimeElement = document.getElementById('currentTime');
+        const currentTime = new Date();
+        const hours = currentTime.getHours();
+        const minutes = currentTime.getMinutes();
+        const timeOfDay = getTimeOfDay(hours);
+        const formattedTime = formatTime(hours, minutes);
+
+        currentTimeElement.textContent = `${formattedTime} ${timeOfDay}`;
+    }
+
+    setInterval(updateCurrentTime, 100);
+    </script>
+    
+<script>
+    console.log(
+  "%cOsaka...",
+  "color: #04ff00; font-weight: bold; font-size: 24px;"
+);
+console.log("You should try typing that.")
     </script>
 </body>
 </html>
