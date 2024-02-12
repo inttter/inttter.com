@@ -128,14 +128,24 @@ terminalInput.addEventListener('keyup', function(event) {
         const inputValue = terminalInput.value.trim().toLowerCase();
         terminalBody.innerHTML = '';
         if (inputValue === 'socials') {
-                terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://github.com/inttter"><span class="flex items-center"><img src="assets/social-images/github.svg" alt="GitHub" class="w-4 h-4 filter grayscale-0 mr-2" /> inttter </span></p></a>';            terminalBody.innerHTML += '<p class="text-indigo-300"><a href="https://discord.com/users/514106760299151372"><span class="flex items-center"><img src="assets/social-images/discord.svg" alt="Discord" class="w-4 h-4 rounded-full filter grayscale-0 mr-2" /> iinter </p></a>';
-                terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://steamcommunity.com/id/intermed/"><span class="flex items-center"><img src="assets/social-images/steam.svg" alt="Steam" class="w-4 h-4 filter grayscale-0 mr-2" /> inter </p></a>';
-                terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://open.spotify.com/user/xboxtheman86"><span class="flex items-center"><img src="assets/social-images/spotify.svg" alt="Spotify" class="w-4 h-4 filter grayscale-0 mr-2" /> inter </p></a>'
-                terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://www.npmjs.com/~intter"><span class="flex items-center"><img src="assets/social-images/npm.svg" alt="NPM" class="w-4 h-4 filter grayscale-0 mr-2" /> intter </p></a>'
-                terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://last.fm/user/intter">'
-                terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="https://www.last.fm/user/intter" <span class="flex items-center"><img src="assets/social-images/lastfm.svg" alt="Last.fm" class="w-4 h-4 filter grayscale-0 mr-2" /> intter </p></a>'
-                terminalBody.innerHTML += '<p class="text-indigo-300 transition-colors duration-300 hover:text-indigo-500"><a href="mailto:me@inttter.com" <span class="flex items-center"><img src="assets/social-images/email.svg" alt="Email" class="w-4 h-4 filter grayscale-0 mr-2" /> me@inttter.com </p></a>'
-                } else if (inputValue === 'clear') {
+            terminalBody.innerHTML += '<div class="tooltip tooltip-primary tooltip-right" data-tip="@inttter"><a href="https://github.com/inttter"><img src="assets/social-images/github.svg" alt="GitHub" class="w-8 h-8 filter grayscale-0 mr-2"></a></div>';
+            terminalBody.innerHTML += '<br>';
+            terminalBody.innerHTML += '<div class="tooltip tooltip-primary tooltip-right" data-tip="@intermed"><a href="https://steamcommunity.com/id/intermed/"><img src="assets/social-images/steam.svg" alt="Steam" class="w-8 h-8 filter grayscale-0 mr-2"></a></div>';
+            terminalBody.innerHTML += '<br>'
+            terminalBody.innerHTML += '<div class="tooltip tooltip-primary tooltip-right" data-tip="@iinter"><a href="https://discord.com/users/514106760299151372"><img src="assets/social-images/discord.svg" alt="Discord" class="w-8 h-8 filter grayscale-0 mr-2"></a></div>';
+            terminalBody.innerHTML += '<br>'
+            terminalBody.innerHTML += '<div class="tooltip tooltip-primary tooltip-right" data-tip="@xboxtheman86"><a href="https://open.spotify.com/user/xboxtheman86"><img src="assets/social-images/spotify.svg" alt="Spotify" class="w-8 h-8 filter grayscale-0 mr-2"></a></div>';
+            terminalBody.innerHTML += '<br>';
+            terminalBody.innerHTML += '<div class="tooltip tooltip-primary tooltip-right" data-tip="@BleueyOsu"><a href="https://osu.ppy.sh/users/19054376"><img src="assets/social-images/osu.svg" alt="osu!" class="w-8 h-8 filter grayscale-0 mr-2"></a></div>';
+            terminalBody.innerHTML += '<br>';
+            terminalBody.innerHTML += '<div class="tooltip tooltip-primary tooltip-right" data-tip="@intter"><a href="https://npmjs.com/~intter"><img src="assets/social-images/npm.svg" alt="npm" class="w-8 h-8 filter grayscale-0 mr-2"></a></div>';
+            terminalBody.innerHTML += '<br>';
+            terminalBody.innerHTML += '<div class="tooltip tooltip-primary tooltip-right" data-tip="@intter"><a href="https://www.last.fm/user/intter"><img src="assets/social-images/lastfm.svg" alt="Last.fm" class="w-8 h-8 filter grayscale-0 mr-2"></a></div>';
+            terminalBody.innerHTML += '<br>';
+            terminalBody.innerHTML += '<div class="tooltip tooltip-primary tooltip-right" data-tip="me@inttter.com"><a href="mailto:me@inttter.com"><img src="assets/social-images/email.svg" alt="Email" class="w-8 h-8 filter grayscale-0 mr-2"></a></div>';
+            terminalBody.innerHTML += '<br>';
+            terminalBody.innerHTML += '<p>Hover to see the names, click on the icons to go to the page!</p>';
+        } else if (inputValue === 'clear') {
             terminalBody.innerHTML += ''
         } else if (inputValue === 'donate') {
             terminalBody.innerHTML += '<p class="text-emerald-300">💰 donations help cover domain renewal fees.</p>';
@@ -147,8 +157,15 @@ terminalInput.addEventListener('keyup', function(event) {
         } else if (inputValue === 'help') {
             terminalBody.innerHTML += helpContent;
         } else if (inputValue === 'osaka') {
-            const videoUrl = 'https://inttter.com/assets/video/well-done.mp4';
-            window.open(videoUrl, '_blank');
+            terminalBody.innerHTML += `
+            <video controls autoplay class="rounded-2xl mt-2" width="600" height="300">
+                <source src="https://inttter.com/assets/video/well-done.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>`;
+            terminalBody.innerHTML += '<br>'
+            terminalBody.innerHTML += '<p>You should watch the original video from YouTube <a href="https://www.youtube.com/watch?v=bsGAsJBW6zM" class="hover:text-emerald-300" style="text-decoration: underline">here</a>.</p>';
+            terminalBody.innerHTML += '<p>Fun Fact: This was downloaded with the help of one of my projects, <a href="https://github.com/inttter/ytdownloader/" class="hover:text-emerald-300" style="text-decoration: underline">YTDownloader</a>.</p>';
+            terminalBody.innerHTML += '<p class="text-xs">It\'s basically abandoned but at some point I will make it better!</p>';
         } else if (inputValue === 'about') {
             terminalBody.innerHTML += '<p class="text-emerald-300">i\'m Inter, from Romania/London. <span class="text-gray-500"># <i class="fa-solid fa-arrow-down"></i> Scroll</span></p>';
             terminalBody.innerHTML += '<br>';
