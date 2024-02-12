@@ -42,10 +42,15 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
 </style>
-<body class="bg-gray-900 text-gray-300 font-mono h-screen flex flex-col justify-center items-center no-scrollbar">
-    <div class="w-full max-w-2xl mx-auto shadow-2xl rounded-xl bg-gray-800 border-black p-6">
-<!-- Terminal Title -->
+<body class="bg-gray-900 text-gray-300 font-mono h-screen flex flex-col justify-center items-center no-scrollbar p-0 m-0 sm:smooth-scroll">
+    <div class="w-full h-screen sm:w-screen sm:h-screen mx-auto shadow-2xl rounded-xl bg-gray-800 border-black p-6">
         <div class="flex justify-between items-center bg-gray-800 p-2 rounded-t-lg">
           <div class="text-lg text-gray-400">~ guest@main</div>
             <div class="flex space-x-1">
@@ -55,9 +60,9 @@
           </div>
     </div>
         <!-- Terminal Body -->
-        <div class="h-64 overflow-y-auto px-6 pt-4 pb-2 text-lg text-gray-500 no-scrollbar" id="terminalBody">
+        <div class="h-auto overflow-y-auto px-6 pt-4 pb-2 text-lg text-gray-500 no-scrollbar" id="terminalBody">
             <p class="text-8xl text-emerald-300 tracking-wider text">
-                <pre class="text-emerald-300 text-sm">
+                <pre class="text-emerald-300 text-sm sm:text-base">
 ██╗███╗   ██╗████████╗███████╗██████╗ 
 ██║████╗  ██║╚══██╔══╝██╔════╝██╔══██╗
 ██║██╔██╗ ██║   ██║   █████╗  ██████╔╝
@@ -73,14 +78,14 @@
         <!-- Terminal Input -->
         <div class="bg-gray-800 px-6 py-4 rounded-b-lg">
             <div class="flex items-center">
-                <div class="text-lg text-[#519975]">guest@inttter.com:~$</div>
+                <div class="text-lg text-[#519975]">$</div>
                 <input type="text" class="bg-transparent border-none focus:outline-none text-lg text-gray-300 placeholder-gray-600 ml-1 w-full" id="terminalInput">
             </div>
         </div>
     </div>
-
-    <div id="modal" class="fixed inset-0 items-center flex justify-center bg-black bg-opacity-50 z-50 hidden backdrop-blur-sm">
-        <div class="bg-gray-900 border-t-4 border-yellow-500 rounded-b text-white px-4 py-3 shadow-lg rounded-xl" role="alert">
+    
+    <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden backdrop-blur-sm">
+        <div class="bg-gray-900 border-t-4 border-yellow-500 rounded-b text-white px-4 py-3 shadow-lg rounded-xl">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-lg font-semibold text-yellow-400"><i class="fa-solid fa-triangle-exclamation" style="color: #FFD43B;"></i> Wait a minute...</h2>
                 <button id="closeButton" class="text-gray-400 hover:text-gray-600 focus:outline-none">
@@ -164,7 +169,7 @@ terminalInput.addEventListener('keyup', function(event) {
             terminalBody.innerHTML += '<p class="text-cyan-300"><a href="https://github.com/inttter/inttter.com" class="text-underline hover:text-emerald-300" style="text-decoration: underline">https://github.com/inttter/inttter.com</a></p>';
         } else if (inputValue === 'banner') {
     terminalBody.innerHTML += `
-    <pre class="text-emerald-300">
+    <pre class="text-emerald-300 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
 ██╗███╗   ██╗████████╗███████╗██████╗ 
 ██║████╗  ██║╚══██╔══╝██╔════╝██╔══██╗
 ██║██╔██╗ ██║   ██║   █████╗  ██████╔╝
