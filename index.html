@@ -20,306 +20,87 @@
     <meta name="description" content="Inter's personal website." />
     <meta name="author" content="Inter" />
     <meta property="og:title" content="Inter">
-    <meta property="og:description" content="Inter's website featuring social media's.">
     <meta property="og:image" content="https://inttter.com/assets/external-assets/og-card.png">
     <meta property="og:url" content="https://inttter.com">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Inter">
-    <meta name="twitter:description" content="Inter's website featuring social media's.">
     <meta name="twitter:image" content="https://inttter.com/assets/external-assets/og-card.png">
     <meta name="twitter:url" content="https://inttter.com">
     <title>Inter</title>
 </head>
 <style>
-/* this all hides the scrollbar */
-
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
+    .social-icon {
+    background-color: #131723;
 }
-
-.no-scrollbar {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-  @keyframes blinker {
-    50% {
-      opacity: 0;
-    }
-  }
 </style>
-<body class="bg-gray-900 text-gray-300 font-mono h-screen flex flex-col justify-center items-center no-scrollbar p-0 m-0 sm:smooth-scroll">
-    <div class="w-full h-screen sm:w-screen sm:h-screen mx-auto shadow-2xl bg-gray-800 border-black p-6">
-        <div class="flex justify-between items-center bg-gray-800 p-2 rounded-t-lg">
-          <div class="text-lg text-gray-400">~ <a href="https://inttter.com">⛺ inttter.com</a></div>
-            <div class="flex space-x-1">
-              <div class="h-4 w-4 bg-red-500 rounded-full hover:bg-red-700" id="closeButtonRed"></div>
-              <div class="h-4 w-4 bg-yellow-500 rounded-full hover:bg-yellow-700"></div>
-              <div class="h-4 w-4 bg-green-500 rounded-full hover:bg-green-700"></div>
-          </div>
-    </div>
-        <!-- Terminal Body -->
-        <div class="h-auto overflow-y-auto px-6 pt-4 pb-2 text-lg text-gray-500 no-scrollbar" id="terminalBody">
-            <p class="text-8xl text-emerald-300 tracking-wider text">
-                <pre class="text-emerald-300 text-sm sm:text-base">
-██╗███╗   ██╗████████╗███████╗██████╗ 
-██║████╗  ██║╚══██╔══╝██╔════╝██╔══██╗
-██║██╔██╗ ██║   ██║   █████╗  ██████╔╝
-██║██║╚██╗██║   ██║   ██╔══╝  ██╔══██╗
-██║██║ ╚████║   ██║   ███████╗██║  ██║
-╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═
-                </pre>
-            </p>            
-            <p class="text-gray-500 text-sm">⚝ he/him ⚝ | <span class="text-gray-500 text-sm" id="currentTime"></span></p>
-            <p class="text-gray-300">To see available commands, type <span class="text-[#519975]">'help'</span></p>
-            <p class="text-gray-300">To view the repository, click <a href="https://github.com/inttter/inttter.com" class="hover:text-emerald-300" style="text-decoration: underline;">here</a></p>
-        </div>
-        <!-- Terminal Input -->
-        <div class="bg-gray-800 px-6 py-4 rounded-b-lg">
-            <div class="flex items-center">
-                <div class="text-lg text-[#519975]">$</div>
-                <input type="text" class="bg-transparent border-none focus:outline-none text-lg text-gray-300 placeholder-gray-600 ml-1 w-full" id="terminalInput">
+<body class="dark:bg-white dark:text-gray-900 bg-gradient-to-t from-gray-900 to-zinc-900 text-white">
+    <div class="flex flex-col items-center justify-center min-h-screen">
+        <div class="relative">
+            <div class="max-w-lg w-full px-4 py-8">
+                <div class="flex items-center justify-between">
+                    <!-- Name and PFP -->
+                    <div class="flex items-center space-x-4 relative">
+                        <div class="relative">
+                            <img src="assets/favicon/pfp.jpg" alt="Profile Picture" class="w-28 h-28 rounded-full hover:cursor-pointer profile-picture">
+                            <div id="dot" class="absolute bottom-1 right-1 w-4 h-4 rounded-full tooltip tooltip-top tooltip-primary" data-tip="Offline"></div>
+                        </div>
+                        <div>
+                            <h1 class="text-6xl font-bold tracking-wide text-blue-400">Inter</h1>
+                            <p class="text-xl text-gray-500 font-mono">he/him</p>
+                            <div id="discordStatus" class="text-lg text-gray-500 flex items-center space-x-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-8 border-t-4 border-pink-500">
+                <div class="flex items-center justify-start space-x-4 my-4">
+                    <a href="https://github.com/inttter" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary hover:scale-110 duration-150" data-tip="@inttter"><img src="assets/socials/github.svg" class="w-full h-full text-white"></a>
+                    <a href="https://osu.ppy.sh/users/19054376" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary flex items-center justify-center hover:scale-110 duration-150" data-tip="@intter"><img src="assets/socials/osu.png" class="w-full h-full text-white"></a>
+                    <a href="https://discord.com/users/514106760299151372" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary hover:scale-110 duration-150" data-tip="@iinter"><img src="assets/socials/discord.svg" class="w-full h-full text-white"></a>
+                    <a href="https://open.spotify.com/user/xboxtheman86" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary hover:scale-110 duration-150" data-tip="@xboxtheman86"><img src="assets/socials/spotify.svg" class="w-full h-full text-white"></a>
+                    <a href="https://www.last.fm/user/intter" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary hover:scale-110 duration-150" data-tip="@intter"><img src="assets/socials/lastfm.svg" class="w-full h-full text-white"></a>
+                    <a href="mailto:me@inttter.com" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary hover:scale-110 duration-150" data-tip="me@inttter.com"><img src="assets/socials/email.svg" class="w-full h-full text-white"></a>
+                </div>
             </div>
         </div>
-    </div>
+
+        <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden backdrop-blur-sm">
+            <div class="bg-gray-900 border-t-4 border-emerald-300 rounded-b text-white px-4 py-3 shadow-lg rounded-xl">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-semibold text-emerald-300"><i class="fa-solid fa-circle-question" style="color: #63E6BE;"></i> <a href="https://www.youtube.com/watch?v=bsGAsJBW6zM" style="text-decoration: underline;">https://www.youtube.com/watch?v=bsGAsJBW6zM</a></h2>
+                    <button id="closeButton" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <video id="modalVideo" controls autoplay muted class="rounded-2xl mt-2" width="600" height="300">
+                    <source src="https://inttter.com/assets/video/well-done.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
     
-    <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden backdrop-blur-sm">
-        <div class="bg-gray-900 border-t-4 border-yellow-500 rounded-b text-white px-4 py-3 shadow-lg rounded-xl">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-lg font-semibold text-yellow-400"><i class="fa-solid fa-triangle-exclamation" style="color: #FFD43B;"></i> Wait a minute...</h2>
-                <button id="closeButton" class="text-gray-400 hover:text-gray-600 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <p>Sorry, you can't close the terminal.</p>
-            <p>Here's a <span class="text-green-300">cat 😼</span> to make up for it.</p>
-            <br>
-            <div class="tooltip tooltip-top tooltip-accent" data-tip="A cat sleeping... 💤">
-                <img src="assets/popups/warning-from-kitty.webp" width="450" alt="Warning From Kitty 😼" class="rounded-2xl">
-            </div>
-        </div>
-    </div>
-
-<script>
-const commandFunctions = {
-    'about': 'shows some info about me',
-    'socials': 'shows my socials',
-    'donate': 'shows my donation methods',
-    'commits': 'shows my latest commits',
-    'repo': 'opens the repository for this page',
-    'banner': 'shows the banner displayed on page load',
-    'clear': 'clears the terminal',
-    'help': 'you are here!!'
-};
-
-let helpContent = '';
-for (const command in commandFunctions) {
-    helpContent += `<p><span class="text-[#73abad]">${command}</span> &nbsp;&nbsp <span class="text-[#519975]">${commandFunctions[command]}</p>`;
-}
-
-const terminalInput = document.getElementById('terminalInput');
-const terminalBody = document.getElementById('terminalBody');
-
-terminalInput.addEventListener('keyup', function(event) {
-    if (event.key === 'Enter') {
-        const inputValue = terminalInput.value.trim().toLowerCase();
-        terminalBody.innerHTML = '';
-        if (inputValue === 'socials') {
-            terminalBody.innerHTML += '<div class="tooltip tooltip-primary tooltip-right" data-tip="@inttter"><a href="https://github.com/inttter"><img src="assets/social-images/github.svg" alt="GitHub" class="w-8 h-8 filter grayscale-0 mr-2"></a></div>';
-            terminalBody.innerHTML += '<br>';
-            terminalBody.innerHTML += '<div class="tooltip tooltip-primary tooltip-right" data-tip="@intermed"><a href="https://steamcommunity.com/id/intermed/"><img src="assets/social-images/steam.svg" alt="Steam" class="w-8 h-8 filter grayscale-0 mr-2"></a></div>';
-            terminalBody.innerHTML += '<br>'
-            terminalBody.innerHTML += '<div class="tooltip tooltip-primary tooltip-right" data-tip="@iinter"><a href="https://discord.com/users/514106760299151372"><img src="assets/social-images/discord.svg" alt="Discord" class="w-8 h-8 filter grayscale-0 mr-2"></a></div>';
-            terminalBody.innerHTML += '<br>'
-            terminalBody.innerHTML += '<div class="tooltip tooltip-primary tooltip-right" data-tip="@xboxtheman86"><a href="https://open.spotify.com/user/xboxtheman86"><img src="assets/social-images/spotify.svg" alt="Spotify" class="w-8 h-8 filter grayscale-0 mr-2"></a></div>';
-            terminalBody.innerHTML += '<br>';
-            terminalBody.innerHTML += '<div class="tooltip tooltip-primary tooltip-right" data-tip="@BleueyOsu"><a href="https://osu.ppy.sh/users/19054376"><img src="assets/social-images/osu.svg" alt="osu!" class="w-8 h-8 filter grayscale-0 mr-2"></a></div>';
-            terminalBody.innerHTML += '<br>';
-            terminalBody.innerHTML += '<div class="tooltip tooltip-primary tooltip-right" data-tip="@intter"><a href="https://npmjs.com/~intter"><img src="assets/social-images/npm.svg" alt="npm" class="w-8 h-8 filter grayscale-0 mr-2"></a></div>';
-            terminalBody.innerHTML += '<br>';
-            terminalBody.innerHTML += '<div class="tooltip tooltip-primary tooltip-right" data-tip="@intter"><a href="https://www.last.fm/user/intter"><img src="assets/social-images/lastfm.svg" alt="Last.fm" class="w-8 h-8 filter grayscale-0 mr-2"></a></div>';
-            terminalBody.innerHTML += '<br>';
-            terminalBody.innerHTML += '<div class="tooltip tooltip-primary tooltip-right" data-tip="me@inttter.com"><a href="mailto:me@inttter.com"><img src="assets/social-images/email.svg" alt="Email" class="w-8 h-8 filter grayscale-0 mr-2"></a></div>';
-            terminalBody.innerHTML += '<br>';
-            terminalBody.innerHTML += '<p>Hover to see the names, click on the icons to go to the page!</p>';
-        } else if (inputValue === 'clear') {
-            terminalBody.innerHTML += ''
-        } else if (inputValue === 'donate') {
-            terminalBody.innerHTML += '<p class="text-emerald-300">💰 donations help cover domain renewal fees.</p>';
-            terminalBody.innerHTML += '<br>';
-            terminalBody.innerHTML += '<p class="text-pink-300">👇 feel free to donate at any of these links:</p>';
-            terminalBody.innerHTML += '<br>';
-            terminalBody.innerHTML += '<p class="text-pink-300"><a href="https://ko-fi.com/intter">☕ kofi: <u class="text-violet-300">https://ko-fi.com/intter</u></a></p>';
-            terminalBody.innerHTML += '<p class="text-pink-300"><a href="https://github.com/sponsors/inttter">🩷 sponsors: <u class="text-violet-300">https://github.com/sponsors/inttter</u></a></p>';
-        } else if (inputValue === 'help') {
-            terminalBody.innerHTML += helpContent;
-        } else if (inputValue === 'osaka') {
-            terminalBody.innerHTML += `
-            <video controls autoplay class="rounded-2xl mt-2" width="600" height="300">
-                <source src="https://inttter.com/assets/video/well-done.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>`;
-            terminalBody.innerHTML += '<br>'
-            terminalBody.innerHTML += '<p>You should watch the original video from YouTube <a href="https://www.youtube.com/watch?v=bsGAsJBW6zM" class="hover:text-emerald-300" style="text-decoration: underline">here</a>.</p>';
-            terminalBody.innerHTML += '<p>Fun Fact: This was downloaded with the help of one of my projects, <a href="https://github.com/inttter/ytdownloader/" class="hover:text-emerald-300" style="text-decoration: underline">YTDownloader</a>.</p>';
-            terminalBody.innerHTML += '<p class="text-xs">It\'s basically abandoned but at some point I will make it better!</p>';
-        } else if (inputValue === 'about') {
-            terminalBody.innerHTML += '<p class="text-emerald-300">i\'m Inter, from Romania/London. <span class="text-gray-500"># <i class="fa-solid fa-arrow-down"></i> Scroll</span></p>';
-            terminalBody.innerHTML += '<br>';
-            terminalBody.innerHTML += '<p class="text-yellow-300">i work on stuff you might find useful, such as:</p>';
-            terminalBody.innerHTML += '<br>';
-            terminalBody.innerHTML += '<p class="text-cyan-300"><a href="https://mdbcli.xyz" class="text-underline hover:text-emerald-300" style="text-decoration: underline">mdbadges-cli</a> - Find badges without ever leaving the terminal. <a href="https://npmjs.org/package/mdbadges-cli" class="badge badge-secondary hover:rotate-6 hover:scale-125 hover: tooltip tooltip-secondary tooltip-top" data-tip="visit on npm!"><i class="fa-solid fa-circle-arrow-down"></i></p>';
-            terminalBody.innerHTML += '<br>';
-            terminalBody.innerHTML += '<p class="text-cyan-300"><a href="https://github.com/inttter/md-badges" class="text-underline hover:text-emerald-300" style="text-decoration: underline">md-badges</a> - The definitive badge list for your projects.</p>';
-            terminalBody.innerHTML += '<br>';
-            terminalBody.innerHTML += '<p class="text-cyan-300"><a href="https://colorflow.cc" class="text-underline hover:text-emerald-300" style="text-decoration: underline">Colorflow</a> - A simple-to-understand and useful website to preview and generate colors.</p>';
-        } else if (inputValue === 'commits') {
-            getRecentCommits('inttter', 10);
-        } else if (inputValue === 'repo') {
-            const repoUrl = 'https://github.com/inttter/inttter.com';
-            window.open(repoUrl, '_blank');
-            terminalBody.innerHTML += '<p class="text-emerald-300">Click the link below if the page does not open:</p>';
-            terminalBody.innerHTML += '<br>'
-            terminalBody.innerHTML += '<p class="text-cyan-300"><a href="https://github.com/inttter/inttter.com" class="text-underline hover:text-emerald-300" style="text-decoration: underline">https://github.com/inttter/inttter.com</a></p>';
-        } else if (inputValue === 'banner') {
-    terminalBody.innerHTML += `
-    <pre class="text-emerald-300 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
-██╗███╗   ██╗████████╗███████╗██████╗ 
-██║████╗  ██║╚══██╔══╝██╔════╝██╔══██╗
-██║██╔██╗ ██║   ██║   █████╗  ██████╔╝
-██║██║╚██╗██║   ██║   ██╔══╝  ██╔══██╗
-██║██║ ╚████║   ██║   ███████╗██║  ██║
-╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═
-    </pre>`;
-        } else {
-            terminalBody.innerHTML += '<p class="text-red-300"><span class="bg-red-300 text-black p-1">ERROR</span> This is not a valid command.</p>';
-            terminalBody.innerHTML += '<br>'
-            terminalBody.innerHTML += '<p class="text-violet-300"><span class="bg-violet-300 text-black p-1">TIP</span> Try running "help" to see a list of commands.</p>';
-        }
-        terminalInput.value = '';
-    }
-});
-
-function getRecentCommits(username, count) {
-    fetch(`https://api.github.com/users/${username}/events`)
-        .then(response => response.json())
-        .then(events => {
-            const pushEvents = events.filter(event => event.type === 'PushEvent');
-            pushEvents.slice(0, count).forEach(event => {
-                const commits = event.payload.commits;
-                commits.forEach(commit => {
-                    const commitName = commit.message.split('\n')[0]; // Get only the first line of the commit message
-                    terminalBody.innerHTML += `<p class="text-green-300">${commitName}</p>`;
-                    terminalBody.innerHTML += '<hr class="my-4 border-gray-600">';
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const modal = document.getElementById('modal');
+                const closeButton = document.getElementById('closeButton');
+                const profilePicture = document.querySelector('.profile-picture');
+                const modalVideo = document.getElementById('modalVideo');
+                
+                profilePicture.addEventListener('click', function() {
+                    modal.classList.remove('hidden');
+                    modalVideo.play();
+                });
+            
+                closeButton.addEventListener('click', function() {
+                    modal.classList.add('hidden');
+                    modalVideo.pause();
                 });
             });
-        })
-        .catch(error => {
-            terminalBody.innerHTML += `<p class="text-red-300">Failed to fetch recent commit names for ${username}. Please try again later.</p>`;
-            console.error(`Error fetching recent commit names for ${username}:`, error);
-        });
-}
-
-    function getTimeOfDay(hour) {
-        if (hour >= 5 && hour < 12) {
-            return '🌅';
-        } else if (hour >= 12 && hour < 18) {
-            return '😎';
-        } else if (hour >= 18 && hour < 20) {
-            return '🌇';
-        } else {
-            return '🌉';
-        }
-    }
-
-    function formatTime(hours, minutes) {
-        const formattedHours = hours.toString().padStart(2, '0');
-        const formattedMinutes = minutes.toString().padStart(2, '0');
-        return `${formattedHours}:${formattedMinutes}`;
-    }
-</script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const modal = document.getElementById('modal');
-        const closeButton = document.getElementById('closeButton');
-        const closeButtonRed = document.getElementById('closeButtonRed');
-        const redBackground = document.querySelector('.bg-red-500');
-        
-        closeButton.addEventListener('click', function() {
-            modal.classList.add('hidden');
-        });
-    
-        closeButtonRed.addEventListener('click', function() {
-            modal.classList.add('hidden');
-        });
-        
-        redBackground.addEventListener('click', function() {
-            modal.classList.remove('hidden');
-        });
-    
-        });
-    </script>
-<script>
-    function updateCurrentTime() {
-        const currentTimeElement = document.getElementById('currentTime');
-        const currentTime = new Date();
-        const hours = currentTime.getHours();
-        const minutes = currentTime.getMinutes();
-        const timeOfDay = getTimeOfDay(hours);
-        const formattedTime = formatTime(hours, minutes);
-
-        currentTimeElement.textContent = `${formattedTime} ${timeOfDay}`;
-    }
-
-    setInterval(updateCurrentTime, 100);
-    </script>
-    
-    <script>
-console.log(
-  "%c............................................................,.....,*,*//.*..***\n"+
-  "............................................................,.....*/,.*//.*..***\n"+
-  "......................................................,,,,,.,.....*****/*/./**,*\n"+
-  ".............................................*#%%%#%###%%%%%%%%%%#**********/((#\n"+
-  "........................................./#(((######%%%######((((#%%%(*,,,,,,((*\n"+
-  ".......................................((%%%%%%%%%%%%/%%%%%%%%%%%%%%#(((,*****,*\n"+
-  ".....................................,%%%%%%%#%%%%%(/..#%#%(%%%%#%%%%%%%%*,*,/(/\n"+
-  ".....................................##%%%%%%%#(%%**..../%%%/%%%%%%%%%%%%%**,((#\n"+
-  "....................................,%%%%%%%%/,(%,.,...../%%.*%%/%%%%%%%%%/,*(/%\n"+
-  "..................................../#%%%%*%//#%#.,.......%%#%(%/*%%%%%%%%#*,(*#\n"+
-  "....................................#%#%%,.%.#%%%,........%%%%(.#.#%%%%%%%%**(/#\n"+
-  "......,,............................#%%%%./.,%%%%%.......*%%%%%. %#%%%%%%%%*,((\n"+
-  "...,.... ,.,........................%%%%%.,.. ,%#/........,.%#%  ,(%%%%%%%%****/\n"+
-  ".*.,,..,,.,........................%%#%%,......................../%%%%%%%%(///(\n"+
-  ".,../..,*..,........................%%%%%,........................*%%%%%%%%(***/\n"+
-  ".,..*...*..,.......................,%%%%%%*.......................(%%%%%%%%/****\n"+
-  ".,..,...*.....,.,..................*%%##%%%%%,....../***/....../%%%%%%%%%%%/****\n"+
-  "....,...,...,,...................../%%%%%%%%%%%%%/.........***%%%#%%%%%%%%%*,,,,\n"+
-  "............,..,...................(%%%%%%%%%%/%%%%%**********%%(/%%%%%%%%%*....\n"+
-  "...........,..., ..................(%%%%%%%%%(.   .***********,.,%%%%%%%%%%,....\n"+
-  "..........,...............,,., ./***,,*/(%%%%%,    ,.,,*,...,    ,%%%%%,%%#.....\n"+
-  ".........,......*.............,, /.*/*,///./%%/    ,........    .(#%%%.*%#.......\n"+
-  "*...............,...............*.*,****((,/.#/.   *,***,*      ,%%%,.*/*,......\n"+
-  ".*...........,**................,,.,*/**,/***(,,(* .****.  *...(///.,//***,*....\n"+
-  "....********,*********,,,,,****** /.**/*/*,,,***,,/,*,*. .*//*..//**********....\n"+
-  "................ ....,,,,,*,,,,*/(,//////***,******(*/,.,////***,***,******,*...\n"+
-  "............................*,,(*,......,***,*,*,*,*,*,*,*,*,*,**,******,****...\n"+
-  "........................................****,******(/*******,****(*,,***,****...\n"+
-  "........................................*,,,,,,***,(*(,,,*,,,,**/,/*,***,****...\n"+
-  ".... ....... ...........................***,,***,**(*#**,***,*,***/*,***,****,..\n"+
-  ".... ................. .................****,***,**(*(****,****/*((*,*//,*,*,*..\n"+
-  ".... ... ...............................,***,***/**/**(*,***,**/*//,**//****,*..\n"+
-  "...  ...................................,,**,,,*/,*/**#*,,,,,,,/#//..          .\n"+
-  ".... ..................................*,***,***/*****//,***,**////,*///////***,\n"+
-  ".... . ....... ........................*,***,*,*//,*,**#,*,*,*,*/(/........,,,..",
-  "color: #F9E79F; font-weight: bold; font-size: 10px;"
-);
-        console.log(
-            "%cYou're looking here...",
-            "color: #FFBF00; font-weight: bold; font-size: 18px;"
-            );
         </script>
+        <script src="lanyard/lanyard.js"></script>
+
 </body>
 </html>
