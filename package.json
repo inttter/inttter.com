@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "autoprefixer": "^10.4.16",
-    "daisyui": "^4.6.0",
+    "daisyui": "^4.7.1",
     "postcss": "^8.4.33",
     "prettier": "3.2.4",
     "purgecss": "^5.0.0",
