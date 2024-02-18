@@ -22,8 +22,18 @@ function fetchPresenceData() {
                 }
                 const dotElement = document.getElementById('dot');
                 dotElement.className = `absolute bottom-1 right-1 tooltip tooltip-top tooltip-primary font-bold w-4 h-4 rounded-full ${discordStatus === 'offline' ? 'bg-gray-500' : (discordStatus === 'online' ? 'bg-green-500' : (discordStatus === 'idle' ? 'bg-yellow-500' : 'bg-red-500'))}`;
-                dotElement.setAttribute('data-tip', statusText); // Update the data-tip attribute with the statusText
-                document.getElementById('statusText').textContent = statusText;
+                dotElement.setAttribute('data-tip', statusText);
+
+                // Update the listeningTo element with the Spotify information
+                const listeningToElement = document.getElementById('listeningTo');
+                if (data?.data?.listening_to_spotify) {
+                    const spotifyData = data.data.spotify;
+                    const trackId = spotifyData.track_id;
+                    const spotifyTrackUrl = `https://open.spotify.com/track/${trackId}`;
+                    listeningToElement.innerHTML = `<a href="${spotifyTrackUrl}" target="_blank"><i class="fa-brands fa-spotify text-green-500 transform-gpu transition-transform hover:rotate-12 duration-250"></i></a> ${spotifyData.song} by ${spotifyData.artist}`;
+                } else {
+                    listeningToElement.textContent = 'Not listening to Spotify';
+                }
             } else {
                 console.error('Failed to fetch presence data');
             }
