@@ -27,36 +27,47 @@
     <meta name="twitter:title" content="Inter">
     <meta name="twitter:image" content="https://inttter.com/assets/external-assets/og-card.png">
     <meta name="twitter:url" content="https://inttter.com">
-    <title>Inter</title>
+    <title>Inter | 404</title>
 </head>
 <body class="dark:bg-white dark:text-gray-900 bg-gradient-to-t from-gray-900 to-zinc-900 text-white">
-    <div class="flex flex-col items-center justify-center min-h-screen">
-        <div class="relative">
-            <div class="max-w-lg w-full px-4 py-8">
-                <div class="flex items-center justify-between">
-                    <!-- Name and PFP -->
-                    <div class="flex items-center space-x-4 relative">
-                      <div class="flex items-center justify-center"> <!-- Add this div -->
-                        <h1 class="text-6xl font-bold tracking-wide text-blue-400">404</h1>
-                    </div>
-                    </div>
-                </div>
-                <hr class="my-8 border-t-4 border-pink-500">
-                <p class="text-emerald-300 font-bold">In some incredible way, you stumbled on a page which does not exist.</p>
-                <br>
-                <p class="text-emerald-300 font-bold">Check to see if the URL you've typed in is right, or return to the main page by clicking <a href="https://inttter.com" class="hover:text-emerald-700" style="text-decoration: underline;">here</a>.</p>
+  <div class="flex flex-col items-center justify-center min-h-screen">
+      <div class="relative">
+          <div class="max-w-3xl w-full px-4 py-8">
+              <div class="flex items-center justify-center">
+                  <h1 class="text-6xl font-bold tracking-wide text-blue-400">This is awkward.</h1>
+              </div>
+              <hr class="my-8 border-t-4 border-pink-500">
+              <p class="text-emerald-300 font-bold">This link does not lead anywhere. Check the link again, or click below to return home.</p>
+              <div class="flex items-center justify-center mt-8">
+                <a href="https:/inttter.com" class="text-white cursor-pointer font-bold bg-gray-100 bg-opacity-10 transition-colors duration-300 hover:bg-gray-300 hover:bg-opacity-20 py-2 px-4 rounded-lg">
+                  Home
+                </a>
+              </div>
+          </div>
+      </div>
+      <div class="absolute bottom-4 text-gray-600">
+        <a href="https://github.com/inttter/inttter.com" target="_blank" class="hover:text-gray-300 cursor-pointer">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <span id="currentTime" class="ml-2"></span>
+      </div>
+  </div>
 
-                <script>
-                  if (
-                    typeof window !== "undefined" &&
-                    window.history &&
-                    window.history.replaceState
-                  ) {
-                    const currentPath = window.location.pathname;
-                    const newPath = currentPath.replace(/\.html$/, "");
-                    window.history.replaceState("", "", newPath);
-                  }
-                </script>
-
+            
+              <script src="./scripts/time.js"></script>
+              <script>
+                if (
+                  typeof window !== "undefined" &&
+                  window.history &&
+                  window.history.replaceState
+                ) {
+                  const currentPath = window.location.pathname;
+                  const newPath = currentPath.replace(/\.html$/, "");
+                  window.history.replaceState("", "", newPath);
+                }
+              </script>
+          </div>
+      </div>
+  </div>
 </body>
 </html>
