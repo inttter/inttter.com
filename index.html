@@ -83,45 +83,7 @@
                     <span id="listeningTo" class=" text-gray-600 truncate overflow-ellipsis max-w-xs sm:max-w-xxs"></span>
                 </div>
             </div>
-
-        <div id="modal" class="fixed inset-0 items-center flex justify-center bg-black bg-opacity-50 z-50 hidden backdrop-blur-sm">
-            <div class="bg-gray-900 border-t-4 border-emerald-300 rounded-b text-white px-4 py-3 shadow-lg rounded-xl">
-                <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-lg font-semibold text-emerald-300"><i class="fa-solid fa-circle-question" style="color: #63E6BE;"></i> <a href="https://www.youtube.com/watch?v=bsGAsJBW6zM" style="text-decoration: underline;">https://www.youtube.com/watch?v=bsGAsJBW6zM</a></h2>
-                    <button id="closeButton" class="text-gray-400 hover:text-gray-600 focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
-                </div>
-                <video id="modalVideo" controls autoplay muted class="rounded-2xl mt-2" width="600" height="300">
-                    <source src="https://inttter.com/assets/video/well-done.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const modal = document.getElementById('modal');
-                const closeButton = document.getElementById('closeButton');
-                const profilePicture = document.querySelector('.profile-picture');
-                const modalVideo = document.getElementById('modalVideo');
-                
-                profilePicture.addEventListener('click', function() {
-                    modal.classList.remove('hidden');
-                    modalVideo.play();
-                });
-            
-                closeButton.addEventListener('click', function() {
-                    modal.classList.add('hidden');
-                    modalVideo.pause();
-                });
-            });
-        </script>
-        <script>
-            console.log("%c⭐ https://github.com/inttter/inttter.com", "font-size: 12px; font-family: monospace; background: black; display: inline-block; color: white; padding: 12px; border-radius: 10px;")
-        </script>
+        <script src="scripts/openvideo.js"></script>
         <script src="scripts/lanyard.js"></script>
         <script src="scripts/time.js"></script>
 </body>
