@@ -47,7 +47,7 @@ function fetchPresenceData() {
                 }
 
                 const dotElement = document.getElementById('dot');
-                dotElement.className = `absolute bottom-1 right-1 tooltip tooltip-top tooltip-primary font-bold w-4 h-4 rounded-full ${discordStatus === 'offline' ? 'bg-gray-400' : (discordStatus === 'online' ? 'bg-emerald-500' : (discordStatus === 'idle' ? 'bg-amber-400' : 'bg-rose-400'))}`;
+                dotElement.className = `absolute bottom-0 right-0.5 tooltip tooltip-top font-semibold w-4 h-4 rounded-full ${discordStatus === 'offline' ? 'bg-gray-400' : (discordStatus === 'online' ? 'bg-emerald-500' : (discordStatus === 'idle' ? 'bg-amber-400' : 'bg-rose-400'))}`;
                 dotElement.setAttribute('data-tip', statusText);
 
                 const listeningToElement = document.getElementById('listeningTo');
