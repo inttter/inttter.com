@@ -2,7 +2,7 @@
 node_modules/
 
 # Compiled CSS
-*.css
+output.css
 
 # Output build directory
 build/
