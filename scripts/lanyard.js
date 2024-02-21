@@ -56,7 +56,7 @@ function fetchPresenceData() {
                     const trackId = spotifyData.track_id;
                     listeningToElement.innerHTML = `<i class="fa-brands fa-spotify text-green-500 transform-gpu transition-transform hover:rotate-12 duration-250"></i></a> what i'm listening to`;
                 } else {
-                    listeningToElement.textContent = 'What I\'m Listening To';
+                    listeningToElement.innerHTML = `<i class="fa-brands fa-spotify text-green-500 transform-gpu transition-transform hover:rotate-12 duration-250"></i></a> what i'm listening to`;
                 }
             } else {
                 console.error('Failed to fetch presence data');
