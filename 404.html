@@ -29,31 +29,33 @@
     <meta name="twitter:url" content="https://inttter.com">
     <title>Inter | 404</title>
 </head>
-<body class="dark:bg-white dark:text-gray-900 bg-gradient-to-t from-gray-900 to-zinc-900 text-white">
-  <div class="flex flex-col items-center justify-center min-h-screen">
-      <div class="relative">
-          <div class="max-w-3xl w-full px-4 py-8">
-              <div class="flex items-center justify-center">
-                  <h1 class="text-6xl font-bold tracking-wide text-blue-400">This is awkward.</h1>
-              </div>
-              <hr class="my-8 border-t-4 border-pink-500">
-              <p class="text-emerald-300 font-bold">This link does not lead anywhere. Check the link again, or click below to return home.</p>
-              <div class="flex items-center justify-center mt-8">
-                <a href="./index.html" class="text-white cursor-pointer font-bold bg-gray-100 bg-opacity-10 transition-colors duration-300 hover:bg-gray-300 hover:bg-opacity-20 py-2 px-4 rounded-lg">
-                  Home
-                </a>
-              </div>
-          </div>
-      </div>
-      <div class="absolute bottom-4 text-gray-600">
-        <a href="https://github.com/inttter/inttter.com" target="_blank" class="hover:text-gray-300 cursor-pointer">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <span id="currentTime" class="ml-2"></span>
-      </div>
-  </div>
+<main class="flex items-center justify-center h-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
+  <div class="px-4 py-16 mx-auto text-center lg:px-8 lg:py-48 max-w-7xl sm:px-6 sm:py-24">
+    <div class="justify-center w-full text-center lg:p-10 max-auto">
+      <div class="justify-center w-full mx-auto">
 
-            
+        <p class="text-5xl font-bold tracking-wide text-white  lg:text-9xl">
+          404
+        </p>
+        <p class="max-w-xl mx-auto mt-4 text-lg tracking-wide font-semibold text-gray-400">
+          This link does not lead anywhere. Check the link again, or click below to return home.
+        </p>
+      </div>
+      <div class="flex justify-center gap-3 mt-10">
+        <a href="/index.html">
+        <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg bg-gray-700 bg-opacity-30 px-6 font-medium text-neutral-200 transition hover:scale-110"><span>Home</span><div class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"><div class="relative h-full w-8 bg-white/20"></div></div></button>
+      </a>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-4 text-gray-600">
+    <a href="https://github.com/inttter/inttter.com" target="_blank" class="hover:text-gray-300 cursor-pointer">
+      <i class="fa-brands fa-github"></i>
+    </a>
+    <span id="currentTime" class="ml-2"></span>
+  </div>
+</div>
+</main>
               <script src="./scripts/time.js"></script>
               <script>
                 if (
