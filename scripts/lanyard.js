@@ -54,10 +54,9 @@ function fetchPresenceData() {
                 if (data?.data?.listening_to_spotify) {
                     const spotifyData = data.data.spotify;
                     const trackId = spotifyData.track_id;
-                    const spotifyTrackUrl = `https://open.spotify.com/track/${trackId}`;
-                    listeningToElement.innerHTML = `<a href="${spotifyTrackUrl}" target="_blank"><i class="fa-brands fa-spotify text-green-500 transform-gpu transition-transform hover:rotate-12 duration-250"></i></a> ${spotifyData.song} by ${spotifyData.artist}`;
+                    listeningToElement.innerHTML = `<i class="fa-brands fa-spotify text-green-500 transform-gpu transition-transform hover:rotate-12 duration-250"></i></a> what i'm listening to`;
                 } else {
-                    listeningToElement.textContent = 'Not listening to Spotify';
+                    listeningToElement.textContent = 'What I\'m Listening To';
                 }
             } else {
                 console.error('Failed to fetch presence data');
