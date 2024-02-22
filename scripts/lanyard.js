@@ -69,4 +69,4 @@ function fetchPresenceData() {
 
 window.addEventListener('load', fetchPresenceData);
 
-setInterval(fetchPresenceData, 60000);
+setInterval(fetchPresenceData, 10000);

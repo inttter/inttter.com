@@ -41,4 +41,4 @@ function fetchSpotifyData() {
 }
 
 window.addEventListener('load', fetchSpotifyData);
-setInterval(fetchSpotifyData, 60000);
+setInterval(fetchSpotifyData, 1000);
