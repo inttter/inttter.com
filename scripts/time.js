@@ -12,4 +12,5 @@ function formatTime(hours, minutes) {
     return `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
 }
 
-setInterval(updateCurrentTime, 1000);
+window.addEventListener('load', updateCurrentTime);
+setInterval(updateCurrentTime, 6000);
