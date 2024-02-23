@@ -1,95 +1,108 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="synthwave">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" />
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link href="./components/font.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.css" rel="stylesheet" type="text/css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="assets/favicon/site.webmanifest" />
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
-    <meta name="msapplication-TileColor" content="#2b5797" />
-    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="description" content="Inter's personal website." />
-    <meta name="author" content="Inter" />
-    <meta property="og:title" content="Inter">
-    <meta property="og:image" content="https://inttter.com/assets/external-assets/og-card.png">
-    <meta property="og:url" content="https://inttter.com">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Inter">
-    <meta name="twitter:image" content="https://inttter.com/assets/external-assets/og-card.png">
-    <meta name="twitter:url" content="https://inttter.com">
-    <title>Inter</title>
-</head>
-<body class="bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
-    <div class="flex flex-col items-center justify-center min-h-screen">
-        <div class="relative">
-            <div class="max-w-lg w-full px-4 py-8">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center space-x-4 relative">
-                        <div class="relative">
-                            <img src="assets/favicon/pfp.jpg" alt="Profile Picture" data-theme="night" class="w-28 h-28 rounded-full hover:cursor-pointer transform transition-transform hover:scale-105 profile-picture ring ring-primary ring-offset-base-100 ring-offset-4">
-                            <div id="dot" class="absolute bottom-1 right-1 w-4 h-4 rounded-full tooltip tooltip-top" data-tip="Loading..." data-theme="coffee"></div>
-                            </div>
-                        <div>
-                            <h1 class="text-6xl font-bold tracking-wide bg-gradient-to-r from-sky-400 to-indigo-700 text-transparent bg-clip-text">Inter</h1>
-                            <p id="activityText" class="text-md text-gray-500 font-semibold"></p>
-                            <div id="discordStatus" class="text-lg text-gray-500 flex items-center space-x-2">
-                            </div>
-                        </div>
+    <!DOCTYPE html>
+    <html lang="en" class="overflow-x-hidden">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" />
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link href="../components/font.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#2b5797" />
+        <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="description" content="Inter's personal website." />
+        <meta name="author" content="Inter" />
+        <meta property="og:title" content="Inter">
+        <meta property="og:image" content="https://inttter.com/assets/external-assets/og-card.png">
+        <meta property="og:url" content="https://inttter.com">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Inter">
+        <meta name="twitter:image" content="https://inttter.com/assets/external-assets/og-card.png">
+        <meta name="twitter:url" content="https://inttter.com">
+        <title>Inter</title>
+    </head>
+    <body class="bg-black bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] bg-no-repeat bg-center backdrop-blur-lg min-h-screen flex items-center justify-center overflow-x-hidden">
+        <div class="max-w-xl w-full px-4 py-8 space-y-6">
+            <div class="max-w-xl w-full px-4 py-8 space-y-6">
+                <div class="flex items-center">
+                    <div class="relative">
+                        <img src="../assets/favicon/pfp.jpg" alt="Profile Picture" data-theme="black" class="w-28 h-28 rounded-lg hover:cursor-pointer profile-picture">
+                        <div id="dot" class="absolute bottom-0 right-0 transform translate-x-2/3 translate-y-2/3 w-4 h-4 rounded-full tooltip tooltip-top" data-tip="Loading..." data-theme="coffee"></div>
+                    </div>
+                    <div class="ml-4">
+                        <h1 id="username" class="text-4xl md:text-6xl font-bold tracking-wide bg-gradient-to-r text-white opacity-80">Inter</h1>
+                        <p id="status" class="text-md text-gray-400 m-1/8 md:max-w-96 max-w-52 md:overflow-hidden"></p>
                     </div>
                 </div>
-                <hr class="my-8 border-t-4 border-sky-400">
-                <div class="flex justify-center mt-4">
-                    <div class="flex items-center space-x-4">
-                        <a href="https://github.com/inttter" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@inttter">
-                            <img src="assets/socials/github.svg" class="w-full h-full text-white">
-                        </a>
-                        <a href="https://osu.ppy.sh/users/19054376" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@intter">
-                            <img src="assets/socials/osu.png" class="w-full h-full text-white">
-                        </a>
-                        <a href="https://discord.com/users/514106760299151372" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@iinter">
-                            <img src="assets/socials/discord.svg" class="w-full h-full text-white">
-                        </a>
-                        <a href="https://open.spotify.com/user/xboxtheman86" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@xboxtheman86">
-                            <img src="assets/socials/spotify.svg" class="w-full h-full text-white">
-                        </a>
-                        <a href="https://www.last.fm/user/intter" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@intter">
-                            <img src="assets/socials/lastfm.svg" class="w-full h-full text-white">
-                        </a>
-                        <a href="mailto:me@inttter.com" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="me@inttter.com">
-                            <img src="assets/socials/email.svg" class="w-full h-full text-white">
-                        </a>
-                    </div>
-                </div>
-             </div>
-            </div>
 
-            <div class="flex items-center justify-start absolute bottom-4 text-gray-600">
-                <a href="https://github.com/inttter/inttter.com" target="_blank" class="hover:text-gray-300 cursor-pointer">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <span class="ml-2" id="currentTime"></span>
-                <div class="flex items-center space-x-2 ml-2">
-                    <span class="text-lg text-gray-600">•</span>
-                    <a href="/spotify" class="font-bold">
-                        <span id="listeningTo" class=" text-gray-600 truncate overflow-ellipsis max-w-xs sm:max-w-xxs"></span>
+                <!-- Text Content below, aka just the paragraphs -->
+
+            
+                <p class="text-md selection:bg-white selection:text-black">
+                    I love games, cats, cars, and computers. It's <span id="currentTime" class="font-semibold text-white hover:text-gray-600 duration-150 cursor-pointer tooltip tooltip-top bg-transparent" data-theme="lofi" data-tip="Europe/London"></span> for me right now.
+                </p>
+
+                <p class="text-md selection:bg-white selection:text-black">
+                    In my free time, I usually play games. Most of my time is spent on <a href="https://www.roblox.com/" target="_blank" class="font-semibold text-white hover:text-gray-600 duration-150 tooltip tooltip-top bg-transparent" data-tip="It's not that bad, I swear." data-theme="lofi">Roblox</a>, particularly on 
+                    <span class="text-white hover:text-gray-600 duration-150 tooltip tooltip-top bg-transparent font-bold" data-tip="&#8599; Click to visit." data-theme="lofi"><a href="www.roblox.com/games/4111023553">Deepwoken</a></span>, 
+                    a <span class="italic">"roguelike"</span> permadeath game.
+                </p>
+                
+                <p class="text-md selection:bg-white selection:text-black">
+                    I also play other miscellaneous games, but I mainly fixate on one game for a while, then move on to the next. 
+                    You can check my Steam profile below to see the other games I play.
+                </p>
+
+                <p class="text-md selection:bg-white selection:text-black">
+                    I have some notable projects, such as 
+                    <a href="https://github.com/inttter/mdbadges-cli" target="_blank" class="font-semibold text-white hover:text-gray-600 duration-150 tooltip tooltip-top bg-transparent" data-tip="&#8599; A CLI tool to find Shields.io badges." data-theme="lofi">mdbadges-cli</a>,
+                    <a href="https://github.com/inttter/create-ps" target="_blank" class="font-semibold text-white hover:text-gray-600 duration-150 tooltip tooltip-top bg-transparent" data-tip="&#8599; Creates the foundations for an NPM package." data-theme="lofi">create-ps</a>,
+                    the site you're looking at now,
+                    and some smaller ones, like
+                    <a href="https://github.com/inttter/timefetcher" target="_blank" class="font-semibold text-white hover:text-gray-600 duration-150 tooltip tooltip-top bg-transparent" data-tip="&#8599; Displays how long it took to fetch from API's." data-theme="lofi">timefetcher</a>.
+                </p>
+
+                <div class="flex items-center space-x-4 selection:bg-gray-700 bg-transparent" data-theme="lofi">
+                    <a href="https://github.com/inttter" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@inttter">
+                        <img src="/assets/socials/github.svg" class="w-full h-full text-white">
+                    </a>
+                    <a href="https://steamcommunity.com/id/intermed" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@inter">
+                        <img src="/assets/socials/steam.svg" class="w-full h-full text-white">
+                    </a>
+                    <a href="https://discord.com/users/514106760299151372" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@iinter">
+                        <img src="/assets/socials/discord.svg" class="w-full h-full text-white">
+                    </a>
+                    <a href="https://osu.ppy.sh/users/19054376" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@intter">
+                        <img src="/assets/socials/osu.svg" class="w-full h-full text-white">
+                    </a>
+                    <a href="https://www.roblox.com/users/251777760/profile" arget="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@gica2431">
+                        <img src="/assets/socials/roblox.svg" class="w-full h-full text-white">
+                    </a>
+                    <a href="https://open.spotify.com/user/xboxtheman86" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@xboxtheman86">
+                        <img src="/assets/socials/spotify.svg" class="w-full h-full text-white">
+                    </a>
+                    <a href="https://www.last.fm/user/intter" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@intter">
+                        <img src="/assets/socials/lastfm.svg" class="w-full h-full text-white">
+                    </a>
+                    <a href="mailto:me@inttter.com" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="me@inttter.com">
+                        <img src="/assets/socials/email.svg" class="w-full h-full text-white">
                     </a>
                 </div>
             </div>
-        <script src="scripts/openvideo.js"></script>
+        </div>
+
         <script src="scripts/lanyard.js"></script>
         <script src="scripts/time.js"></script>
-</body>
-</html>
+    </body>
+    </html>
