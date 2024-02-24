@@ -9,7 +9,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" />
         <link rel="preconnect" href="https://rsms.me/">
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-        <link href="../components/font.css" rel="stylesheet">
+        <link href="/components/font.css" rel="stylesheet">
+        <link rel="stylesheet" href="/components/social-names.css">
         <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.css" rel="stylesheet" type="text/css" />
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
@@ -46,7 +47,7 @@
                     </div>
                 </div>
 
-                <!-- Text Content below, aka just the paragraphs -->
+                <!-- all the text content here: -->
 
             
                 <p class="text-md selection:bg-white selection:text-black">
@@ -71,34 +72,66 @@
                     <a href="https://github.com/inttter/timefetcher" target="_blank" class="font-semibold text-white hover:text-gray-600 duration-150 tooltip tooltip-top bg-transparent" data-tip="&#8599; Displays how long it took to fetch from API's." data-theme="lofi">timefetcher</a>.
                 </p>
 
-                <div class="flex items-center space-x-4 selection:bg-gray-700 bg-transparent" data-theme="lofi">
-                    <a href="https://github.com/inttter" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@inttter">
-                        <img src="/assets/socials/github.svg" class="w-full h-full text-white">
+                <!-- socials area below here: !-->
+
+                <div class="flex flex-wrap md:flex-nowrap items-center justify-center md:justify-start space-x-2 selection:bg-gray-700 bg-transparent" data-theme="lofi">
+                    <a href="https://github.com/inttter" target="_blank" class="font-semibold active:scale-90 duration-150">
+                        <div class="flex items-center space-x-2">
+                            <img src="/assets/socials/github.svg" class="w-6 h-6 text-white">
+                            <code class="inline-code">inttter</code>
+                        </div>
                     </a>
-                    <a href="https://steamcommunity.com/id/intermed" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@inter">
-                        <img src="/assets/socials/steam.svg" class="w-full h-full text-white">
+
+                    <span class="text-black"></span>
+
+                    <a href="https://steamcommunity.com/id/intermed" target="_blank" class="font-semibold active:scale-90 duration-150">
+                        <div class="flex items-center space-x-2">
+                            <img src="/assets/socials/steam.svg" class="w-6 h-6 text-white">
+                            <code class="inline-code">inter</code>
+                        </div>
                     </a>
-                    <a href="https://discord.com/users/514106760299151372" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@iinter">
-                        <img src="/assets/socials/discord.svg" class="w-full h-full text-white">
+
+                    <span class="text-black"></span>
+
+                    <a href="https://discord.com/users/514106760299151372" target="_blank" class="font-semibold active:scale-90 duration-150">
+                        <div class="flex items-center space-x-2">
+                            <img src="/assets/socials/discord.svg" class="w-6 h-6 text-white">
+                            <code class="inline-code">iinter</code>
+                        </div>
                     </a>
-                    <a href="https://osu.ppy.sh/users/19054376" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@intter">
-                        <img src="/assets/socials/osu.svg" class="w-full h-full text-white">
+
+                    <!-- these are to fix the spacing on mobile, do not touch !-->
+                    <br class="md:hidden">
+                    <br class="md:hidden">
+                    <br class="md:hidden">
+
+                    <span class="text-black"></span>
+
+                    <a href="https://osu.ppy.sh/users/19054376" target="_blank" class="font-semibold active:scale-90 duration-150">
+                        <div class="flex items-center space-x-2">
+                            <img src="/assets/socials/osu.svg" class="w-6 h-6 text-white">
+                            <code class="inline-code">iinter</code>
+                        </div>
                     </a>
-                    <a href="https://www.roblox.com/users/251777760/profile" arget="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@gica2431">
-                        <img src="/assets/socials/roblox.svg" class="w-full h-full text-white">
-                    </a>
-                    <a href="https://open.spotify.com/user/xboxtheman86" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@xboxtheman86">
-                        <img src="/assets/socials/spotify.svg" class="w-full h-full text-white">
-                    </a>
-                    <a href="https://www.last.fm/user/intter" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="@intter">
-                        <img src="/assets/socials/lastfm.svg" class="w-full h-full text-white">
-                    </a>
-                    <a href="mailto:me@inttter.com" target="_blank" class="w-11 h-10 font-bold tooltip tooltip-top tooltip-primary transform transition-transform duration-150 active:scale-90" data-tip="me@inttter.com">
-                        <img src="/assets/socials/email.svg" class="w-full h-full text-white">
+
+                    <span class="text-black"></span>
+                    
+                    <a href="https://www.last.fm/user/intter" target="_blank" class="font-semibold active:scale-90 duration-150">
+                        <div class="flex items-center space-x-2">
+                            <img src="/assets/socials/lastfm.svg" class="w-6 h-6 text-white">
+                            <code class="inline-code">iinter</code>
+                        </div>
                     </a>
                 </div>
-            </div>
-        </div>
+
+                <!-- email in the bottom right !-->
+
+                <div class="relative md:fixed hidden md:block bottom-3 right-3">
+                    <div class="flex items-center font-bold text-xs text-gray-600 hover:text-white duration-150 tooltip tooltip-left bg-transparent" data-tip="&#8599; drop me an email!" data-theme="lofi">
+                        <img src="/assets/socials/email.svg" class="w-3 h-3 mr-1">
+                        <a href="mailto:Inter%20<me@inttter.com>"><span>me@inttter.com</span></a>
+                    </div>
+                </div>
 
         <script src="scripts/lanyard.js"></script>
         <script src="scripts/time.js"></script>
