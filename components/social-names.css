@@ -1,0 +1,9 @@
+.inline-code {
+    background-color: #1a202c;
+    color: #d2d6dc;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    font-family: 'Inter', Courier, monospace;
+    display: inline;
+    text-decoration: bold;
+}
