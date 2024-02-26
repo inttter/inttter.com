@@ -6,4 +6,10 @@
     font-family: 'Inter', Courier, monospace;
     display: inline;
     text-decoration: bold;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.inline-code:hover {
+    color: #EEBEBE;
+    transform: scale(1.10);
 }
