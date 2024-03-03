@@ -11,7 +11,7 @@ function fetchPresenceData() {
                 let discordStatus = data.data.discord_status;
                 let platform = '';
 
-                // Determine platform
+                // determines the platform
                 if (data.data.active_on_discord_desktop) {
                     platform = 'Desktop';
                 } else if (data.data.active_on_discord_mobile) {
@@ -20,7 +20,6 @@ function fetchPresenceData() {
                     platform = 'Web';
                 }
 
-                // Set status text based on Discord status
                 let statusText = '';
                 switch (discordStatus) {
                     case 'online':
@@ -37,16 +36,15 @@ function fetchPresenceData() {
                         break;
                 }
 
-                // Update dot element
                 const dotElement = document.getElementById('dot');
-                dotElement.className = `absolute bottom-0 right-0.5 transform translate-x-1/2 w-4 h-4 rounded-full tooltip tooltip-top ${discordStatus === 'offline' ? 'bg-gray-400' : (discordStatus === 'online' ? 'bg-emerald-500' : (discordStatus === 'idle' ? 'bg-amber-400' : 'bg-rose-400'))}`;
+                dotElement.className = `absolute bottom-0 right-0.5 transform translate-x-1/2 w-4 h-4 rounded-full tooltip tooltip-top font-semibold ${discordStatus === 'offline' ? 'bg-gray-400' : (discordStatus === 'online' ? 'bg-emerald-500' : (discordStatus === 'idle' ? 'bg-amber-400' : 'bg-rose-400'))}`;
                 dotElement.setAttribute('data-tip', statusText);
 
-                // Prioritize game activity over Spotify activity
+                // i'm prioritizing game activity over spotify activity here
                 for (let activity of activities) {
                     if (activity.type === 0) {
                         gameActivity = activity;
-                        break; // Exit loop if game activity found
+                        break;
                     } else if (activity.name === 'Spotify') {
                         spotifyActivity = activity;
                     }
@@ -69,4 +67,4 @@ function fetchPresenceData() {
 }
 
 window.addEventListener('load', fetchPresenceData);
-setInterval(fetchPresenceData, 10000);
+setInterval(fetchPresenceData, 10000); // updates every 10s
