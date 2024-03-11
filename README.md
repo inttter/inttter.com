@@ -1,3 +1,4 @@
-# inttter.com
+# Moved to [inttter/iinter.me](https://github.com/inttter/iinter.me)
 
-The source for [https://inttter.com](https://inttter.com).
+> [!IMPORTANT]
+> This site is deprecated and will no longer be updated, please go to the above repository instead.
